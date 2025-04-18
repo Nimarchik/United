@@ -1,0 +1,159 @@
+@import './App.module.scss';
+
+.comunity {
+	padding: 180px 0 125px;
+}
+.comunityInnerBlocks {
+	padding: $padding;
+}
+
+.comunityInnerSubGen {
+	@include subtitle;
+}
+
+.comunityInnerTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.comunityInnerSub {
+	@include subtitle;
+	color: $base-color;
+}
+
+.comunityInnerBlocksPrav {
+	@include sectionNewStyle;
+
+	&:hover {
+		.comunityInnerBlocksPravContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+		.comunityInnerBlocksPravImg {
+			transform: scale(1.1);
+			filter: drop-shadow(0 0 10px $bgColor-btn-hover);
+
+			transition: all 0.8s;
+		}
+	}
+}
+
+.comunityInnerBlocksHelps {
+	@include sectionNewStyle;
+
+	&:hover {
+		.comunityInnerBlocksHelpsContHelpsLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+		.comunityInnerBlocksHelpsImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.comunityInnerBlocksUniteChannel {
+	@include sectionNewStyle;
+
+	&:hover {
+		.comunityInnerBlocksUniteChannelImg {
+			transform: scale(1.1);
+			filter: drop-shadow(0 0 10px $bgColor-btn-hover);
+			transition: all 0.8s;
+		}
+		.comunityInnerBlocksUniteChannelContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+
+.comunityInnerBlocksChats {
+	@include sectionNewStyle;
+
+	&:hover {
+		.comunityInnerBlocksChatsImg {
+			transform: scale(1.1);
+			filter: drop-shadow(0 0 10px $bgColor-btn-hover);
+			transition: all 0.8s;
+		}
+		.comunityInnerBlocksChatsContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+
+.comunityInnerBlocksPravCont,
+.comunityInnerBlocksUniteChannelCont {
+	width: $width-sectionNewStyleCont2;
+	margin-right: 38px;
+}
+.comunityInnerBlocksHelpsContHelps,
+.comunityInnerBlocksChatsCont {
+	width: $width-sectionNewStyleCont;
+}
+
+.comunityInnerBlocksPravContTitle,
+.comunityInnerBlocksHelpsContHelpsTitle,
+.comunityInnerBlocksUniteChannelContTitle,
+.comunityInnerBlocksChatsContTitle {
+	margin-bottom: $margin-bottom;
+}
+
+.comunityInnerBlocksPravContSub {
+	margin-bottom: 63px;
+}
+
+.comunityInnerBlocksHelpsContHelpsSub {
+	margin-bottom: 138px;
+}
+
+.comunityInnerBlocksUniteChannelContSub,
+.comunityInnerBlocksChatsContSub {
+	margin-bottom: 144px;
+}
+
+.comunityInnerBlocksPravContLink,
+.comunityInnerBlocksHelpsContHelpsLink,
+.comunityInnerBlocksUniteChannelContLink,
+.comunityInnerBlocksChatsContLink {
+	display: inline-block;
+	padding: 6px;
+	border-radius: $border-radius-card;
+	transition: all 0.5s;
+}
+
+.comunityInnerBlocksPravImg {
+	margin-left: 124px;
+	transition: all 0.8s;
+}
+
+.comunityInnerBlocksHelpsImg {
+	margin-bottom: -110px;
+	transition: all 0.8s;
+}
+
+.comunityInnerBlocksUniteChannelImg {
+	margin-bottom: 50px;
+	margin-left: 55px;
+	transition: all 0.8s;
+}
+
+.comunityInnerBlocksChatsImg {
+	transition: all 0.8s;
+}
+
+.AllComunity{
+  padding: $padding;
+}
+
+.AllComunityInnerTitle{
+  @include titleSection;
+  margin-bottom: 72px;
+}

@@ -1,0 +1,16 @@
+@import './App.module.scss';
+
+.gamesForAnd{
+  padding: 180px 0 80px;
+}
+
+.gamesForAndInnerTitle{
+  @include titleSection;
+  margin-bottom: $margin-bottom;
+}
+
+.gamesForAndInnerSub{
+  @include subtitle;
+  color: $base-color;
+  margin-bottom: 72px;
+}

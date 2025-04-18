@@ -1,0 +1,42 @@
+@import './App.module.scss';
+
+.error {
+	padding: 155px 0 85px;
+	font-family: $Manrope;
+}
+
+.errorInnerimg {
+  width: 171px;
+  color: $bgColor-btn;
+  background: linear-gradient(
+		286deg,
+		rgba(121, 16, 157, 0.1) 13.4%,
+		#79109d 51.85%,
+		rgba(121, 16, 157, 0.1) 81.33%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 96px;
+	font-weight: 700;
+	letter-spacing: -4.8px;
+  margin-bottom: -10px;
+}
+
+.errorInnerTitle {
+	font-size: $clampTextTitle;
+	font-weight: 800;
+	line-height: 115%;
+	letter-spacing: -0.72px;
+	margin-bottom: $margin-bottom;
+	width: 660px;
+}
+
+.errorInnerSub {
+	width: 752px;
+	margin-bottom: $margin-bottom;
+}
+
+.errorInnerBtn {
+	@include btnReg;
+}

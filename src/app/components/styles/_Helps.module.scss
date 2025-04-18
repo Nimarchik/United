@@ -1,0 +1,57 @@
+@import './App.module.scss';
+
+.helps {
+	padding: $padding;
+}
+
+.helpsContainer {
+	&:hover {
+		.helpsContainerLink {
+			color: #000;
+			background-color: $base-color;
+			transition: all 0.6s;
+		}
+		.helpsImg {
+			transform: scale(1.08);
+			transition: all 0.9s;
+		}
+	}
+}
+
+.helpsContainerBlock {
+	position: absolute;
+	top: 80px;
+	left: 38px;
+	width: 347px;
+}
+
+.helpsContainerTitle {
+	font-size: $calcFont;
+	font-weight: 800;
+	line-height: 115%; /* 43.7px */
+	letter-spacing: -0.57px;
+	margin-bottom: $margin-bottom;
+}
+
+.helpsContainerSub {
+	@include subtitle;
+	text-align: inherit;
+	font-weight: 600;
+	color: $base-color;
+	margin-bottom: 217px;
+}
+
+.helpsContainerLink {
+	display: inline-flex;
+	align-items: center;
+	padding: 0 5px;
+	border-radius: $border-radius;
+	transition: all 0.6s;
+}
+
+.helpsImg {
+	position: absolute;
+	right: -10px;
+	z-index: -1;
+	transition: all 0.9s;
+}

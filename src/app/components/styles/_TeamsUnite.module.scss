@@ -1,0 +1,99 @@
+@import './App.module.scss';
+
+.TeamsUnite {
+	padding: 180px 0 125px;
+}
+
+.TeamsUniteInnerTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.TeamsUniteInnerSub {
+	@include subtitle;
+	color: $base-color;
+}
+
+.TeamsUniteFounder,
+.TeamsUniteProject,
+.TeamsUniteCommunity {
+	padding: $padding;
+}
+
+.TeamsUniteFounderInnerTitle {
+	@include titleSection;
+	margin-bottom: 72px;
+}
+
+.TeamsUniteFounderInnerList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 72px 35px;
+}
+
+.TeamsUniteFounderInnerItem {
+	position: relative;
+	width: 310px;
+	height: 396px;
+}
+
+.TeamsUniteFounderInnerItemBlock {
+	background-color: $bgColor-block;
+	height: 159px;
+	padding: 26px 24px;
+	margin-top: -7px;
+	border-bottom-left-radius: $border-radius-card;
+	border-bottom-right-radius: $border-radius-card;
+}
+
+.TeamsUniteFounderInnerItemBlockTitle,
+.TeamsUniteProjectInnerBlockTitle,
+.TeamsUniteCommunityInnerItemBlockTitle {
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 110%;
+	letter-spacing: -0.24px;
+	margin-bottom: 11px;
+}
+
+.TeamsUniteFounderInnerItemBlockSub,
+.TeamsUniteProjectInnerBlockSub,
+.TeamsUniteCommunityInnerItemBlockSub {
+	color: $colot-subtitle;
+	text-align-last: left;
+	font-weight: 700;
+	line-height: 110%;
+	font-size: 14px;
+}
+
+
+
+.TeamsUniteProjectInnerTitle,
+.TeamsUniteCommunityInnerTitle{
+  @include titleSection;
+  margin-bottom: 72px;
+}
+
+.TeamsUniteProjectInnerList,
+.TeamsUniteCommunityInnerList {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 72px 32px;
+}
+
+.TeamsUniteProjectInnerItem,
+.TeamsUniteCommunityInnerItem {
+	width: 226px;
+	height: 395px;
+}
+
+.TeamsUniteProjectInnerBlock,
+.TeamsUniteCommunityInnerItemBlock {
+	width: 226px;
+	height: 159px;
+	margin-top: -7px;
+	padding: 26px 17px;
+	background-color: $bgColor-block;
+	border-bottom-left-radius: $border-radius-card;
+	border-bottom-right-radius: $border-radius-card;
+}

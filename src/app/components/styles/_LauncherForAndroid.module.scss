@@ -1,0 +1,143 @@
+@import './App.module.scss';
+
+.sectionItems {
+	padding: $padding;
+}
+
+.sectionAndBlock {
+	position: absolute;
+	top: 80px;
+	left: 38px;
+	width: 394px;
+}
+
+.sectionAndTitle {
+	font-size: $calcFont;
+	font-weight: 800;
+	line-height: 115%;
+	letter-spacing: -0.38px;
+	margin-bottom: $margin-bottom;
+}
+
+.sectionAndImg {
+	position: absolute;
+	top: 68px;
+	right: 53px;
+}
+
+.bigColectionsContent {
+	@include sectionStyle;
+	background-color: $bgColor-block;
+	margin-bottom: 20px;
+
+	&:hover {
+		.bigColectionsLink {
+			background-color: $base-color;
+			color: #000;
+			transition: all 0.5s;
+		}
+
+		.bigColectionsImg {
+			transform: scale(1.08);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.bigColectionsImg {
+	position: absolute;
+	top: 163px;
+	left: 50px;
+	transition: all 0.8s;
+}
+
+.bigColectionsBlock {
+	position: absolute;
+	top: 80px;
+	right: 98px;
+	width: 430px;
+}
+
+.bigColectionsTitle {
+	width: 300px;
+	font-size: $calcFont;
+	font-weight: 800;
+	line-height: 115%; /* 43.7px */
+	letter-spacing: -0.38px;
+	margin-bottom: $margin-bottom;
+}
+.bigColectionsSub {
+	letter-spacing: -0.1px;
+	margin-bottom: 100px;
+}
+
+.bigColectionsLink {
+	display: inline-block;
+	border-radius: $border-radius-card;
+	padding: 4px;
+	transition: all 0.5s;
+}
+
+.servUniteImg1 {
+	position: absolute;
+	top: 50px;
+	right: 0;
+}
+
+.popularGameAnd{
+	padding: $padding;
+}
+
+.popularGameAndTitle{
+	@include titleSection;
+	margin: 0 auto;
+	width: 543px;
+	margin-bottom: $margin-bottom;
+}
+
+.popularGameAndSub{
+	@include subtitle;
+	color: $base-color;
+	margin-bottom: 72px;
+}
+
+.popularGameAndListSub {
+	@include subtitle;
+	font-size: 16px;
+	text-align: left;
+	margin-bottom: 11px;
+}
+
+.popularGameAndListTitle {
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 110%; /* 26.4px */
+	letter-spacing: -0.24px;
+}
+
+
+.popularGameAndList{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 72px 35px;
+}
+
+.popularGameAndListItem{
+	border-radius: $border-radius-card;
+	background-color: $bgColor-block;
+}
+
+.popularGameAndListImg{
+	margin-bottom: 30px;
+}
+
+.popularGameAndBlock{
+	margin-left: 24px;
+	height: 180px;
+}
+
+.popularGameAndListImgBomb{
+	border-top-left-radius: $border-radius-card;
+	border-top-right-radius: $border-radius-card;
+	margin-bottom: 30px;
+}

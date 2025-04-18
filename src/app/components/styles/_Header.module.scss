@@ -1,0 +1,195 @@
+@import "./App.module.scss";
+
+.header {
+	position: fixed;
+	top: -1px;
+	right: 0;
+	left: 0;
+	padding: 11px 0;
+	border: 1px solid rgba(63, 63, 74, 0.6);
+	background: rgba($color: #222228, $alpha: 0.1);
+	font-family: $Manrope;
+	z-index: 20;
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba($color: #222228, $alpha: 0.2);
+		backdrop-filter: blur(15px);
+		z-index: 1;
+	}
+}
+
+.nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 18px;
+	z-index: 20;
+}
+
+.navMedia {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.navList {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.listLang {
+	cursor: pointer;
+	display: block;
+	height: 25px;
+	font-size: 18px;
+	font-weight: 800;
+}
+
+.navListItem {
+	position: relative;
+}
+
+.navListLink,
+.navListLink1,
+.navListLink2,
+.navListLink3,
+.navListLink4,
+.navListLink5,
+.navListLink6 {
+	position: relative;
+	text-align: center;
+	padding: 6px;
+	border-radius: 20px;
+	z-index: 2;
+	transition: all 0.4s;
+
+	&:hover {
+		background-color: rgba($color: $base-color, $alpha: 0.4);
+		transition: all 0.4s;
+	}
+}
+
+.navListLink {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		left: -15px;
+		width: 100%;
+		height: 53px;
+	}
+
+	&:hover {
+		.navListItemList {
+			overflow: visible;
+			padding: 15px;
+			height: auto;
+			opacity: 1;
+			transition: all 0.4s;
+		}
+	}
+}
+
+.navListLink1 {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		left: -15px;
+		width: 100%;
+		height: 53px;
+	}
+
+	&:hover {
+		.navListItemList1 {
+			overflow: visible;
+			padding: 15px;
+			height: auto;
+			opacity: 1;
+			transition: all 0.4s;
+		}
+	}
+}
+
+.navListLink3 {
+	position: relative;
+
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		left: -15px;
+		width: 100%;
+		height: 53px;
+	}
+
+	&:hover {
+		.navListItemList3 {
+			overflow: visible;
+			padding: 15px;
+			height: auto;
+			opacity: 1;
+			transition: all 0.4s;
+		}
+	}
+}
+
+.navListItemList,
+.navListItemList1,
+.navListItemList3 {
+	position: absolute;
+	top: 5px;
+	margin-top: 50px;
+	right: 0;
+	left: -80px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	height: 0;
+	opacity: 0;
+	width: 260px;
+	overflow: hidden;
+	font-size: 16px;
+	border-radius: $border-radius-card;
+	background-color: $bgColor-block;
+	transition: all 0.4s;
+}
+
+.navListItemListItem,
+.navListItemListItem1,
+.navListItemListItem3 {
+	transition: all 0.4s;
+	&:hover {
+		border-radius: $border-radius-card;
+		background-color: rgba($color: $base-color, $alpha: 0.4);
+		transition: all 0.4s;
+	}
+}
+.navBtnReg {
+	padding: 8px 28px;
+	font-size: 15px;
+	border-radius: 10px;
+	letter-spacing: -0.075px;
+	font-weight: 700;
+	background-color: $bgColor-btn;
+	transition: all 0.4s;
+
+	&:hover {
+		background-color: $bgColor-btn-hover;
+		transition: all 0.4s;
+	}
+}

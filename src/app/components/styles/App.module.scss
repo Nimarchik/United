@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Mansalva&family=Open+Sans:ital,wght@0,600;1,600&family=Roboto:wght@500;700&display=swap');
+
+// COLORS
+$base-color: #fff;
+$black-color: #000;
+$border-radius: 20px;
+$bgColor-btn: #79109d;
+$bgColor-btn-hover: #a824d4;
+
+$colot-subtitle: #a1a1a1;
+$bgColor-block: #232229;
+$border-radius-card: 24px;
+$bgColor-block-btn: rgba(
+	$color: #49484f,
+	$alpha: 0.35,
+);
+$color-wrapper: #18181b;
+
+//WIDHT
+$width-sectionNewStyleCont: 395px;
+$width-sectionNewStyleCont2: 485px;
+
+// FONTS
+$Manrope: 'Manrope', sans-serif;
+$Inter: 'Inter', sans-serif;
+$openSans: 'Open Sans', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+$Monslava: 'Mansalva', sans-serif;
+$BebasNenu: 'Bebas Neue', sans-serif;
+
+
+// TEXT SIZE
+$clampSection: clamp(2.125rem, 1.475rem + 2.5243vw, 3.75rem); // 60px
+$clampTextTitle: clamp(1.75rem, 1.293rem + 1.4225vw, 3rem); // 48px
+$calcFont: clamp(1.75rem, 1.0357rem + 1.4881vw, 2.375rem); // 38px
+$clampText: clamp(1rem, 0.9rem + 0.3883vw, 1.25rem); // 20px
+$padding: 80px 0px;
+$margin-bottom: 24px;
+
+@import url('./_media.module.scss');
+@import url('./_Header.module.scss');
+@import url('./_Home.module.scss');
+@import url('./_LauncherForPc.module.scss');
+@import url('./_StartGame.module.scss');
+@import url('./_Footer.module.scss');
+@import url('./_Flickyti.scss');
+@import url('./_VoiceChat.module.scss');
+@import url('./_Helps.module.scss');
+@import url('./_LauncherForAndroid.module.scss');
+@import url('./_ServicesGames.module.scss');
+@import url('./_TeamsSpeak.module.scss');
+@import url('./_Mumble.module.scss');
+@import url('./_Donate.module.scss');
+@import url('./_About.module.scss');
+@import url('./_TeamsUnite.module.scss');
+@import url('./_News.module.scss');
+@import url('./_Error.module.scss');
+@import url('./_Resource.module.scss');
+@import url('./_KeySteam.module.scss');
+@import url('./_ProgramsForGame.module.scss');
+@import url('./_GamesForAndroid.module.scss');
+@import url('./_ComunityUnite.module.scss');
+@import url('./_Partneres.madole.scss');
+@import url('./_Contact.module.scss');
+@import url('./_Privacy.module.scss');
+@import url('./_Rules.module.scss');
+@import url('./_SinglGame.module.scss');
+@import url('./_Career.module.scss');
+@import url('./_BuyGames.module.scss');
+
+html,
+body,
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: $base-color;
+	line-height: normal;
+	scroll-behavior: smooth;
+}
+
+body,
+html {
+	min-height: 100%;
+	background-color: $color-wrapper;
+}
+
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+ul,
+ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,
+button,
+select {
+	background-color: transparent;
+	outline: none;
+	border: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+@mixin btnReg {
+	display: flex;
+	position: relative;
+	padding: 15px 50px;
+	border-radius: 10px;
+	font-size: 16px;
+	font-weight: 700;
+	background-color: $bgColor-btn;
+	transition: all 0.4s;
+
+	&:hover {
+		background-color: $bgColor-btn-hover;
+		transition: all 0.4s;
+	}
+}
+
+@mixin titleSection {
+	font-size: $clampSection; // 60px
+	font-weight: 800;
+	line-height: 110%;
+	text-align: center;
+	letter-spacing: -0.9px;
+}
+
+@mixin subtitle {
+	margin-bottom: 24px;
+	font-size: $clampText; // 20px
+	text-align: center;
+	letter-spacing: -0.1px;
+	font-weight: 800;
+	color: #a1a1a1;
+}
+
+@mixin sectionStyle {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 525px;
+	padding: 38px 0 42px 38px;
+	border-radius: $border-radius;
+	overflow: hidden;
+	transition: all 0.7s;
+}
+
+@mixin sectionNewStyle {
+	cursor: pointer;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $bgColor-block;
+	margin-bottom: $margin-bottom;
+	width: 100%;
+	height: 525px;
+	padding: 38px 0 42px 38px;
+	border-radius: $border-radius;
+	overflow: hidden;
+	transition: all 0.7s;
+}
+
+@mixin sectionContentBlock {
+	position: absolute;
+	top: 30%;
+	left: 4%;
+	width: 339px;
+}
+
+@mixin sectionLinc {
+	position: absolute;
+	bottom: 10%;
+	display: inline-flex;
+	align-items: center;
+	gap: 14px;
+	padding: 5px;
+	border-radius: $border-radius;
+	font-size: 20px;
+	font-weight: 700;
+	z-index: 2;
+	transition: all 0.7s;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh;
+	font-weight: 600;
+	font-style: normal;
+	font-size: clamp(1rem, 0.8248rem + 0.6803vw, 1.25rem);
+	font-family: $Manrope;
+}
+
+.container {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.animated {
+	flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+
+@media screen and (max-width: 514px) {
+	html, body {
+		width: 100%;
+	}
+	.container {
+		width: 100%;
+		margin: 0 auto;
+	}
+}

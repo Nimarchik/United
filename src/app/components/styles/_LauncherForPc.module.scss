@@ -1,0 +1,528 @@
+@import './App.module';
+
+@mixin sectionBlockStyle {
+	position: relative;
+	display: flex;
+	height: 475px;
+	margin-bottom: 20px;
+	align-items: center;
+	justify-content: space-between;
+	border-radius: $border-radius;
+	background-color: $bgColor-block;
+	overflow: hidden;
+}
+
+@mixin links {
+	display: inline;
+	padding: 5px;
+	border-radius: $border-radius-card;
+	transition: all 0.6s;
+}
+
+@mixin linkHover {
+	color: #000;
+	background-color: $base-color;
+	transition: all 0.6s;
+}
+@mixin img {
+	position: absolute;
+	transition: all 0.8s;
+}
+
+@mixin imgHover {
+	transform: scale(1.05);
+	transition: all 0.8s;
+}
+
+.launchPC {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	padding: 160px 0 80px;
+}
+
+.lanchPcImgPakLeft,
+.lanchPcImgPakRight {
+	position: relative;
+	height: 490px;
+}
+
+@keyframes fill-scroll {
+	to {
+		transform: translateY(-1500%);
+	}
+}
+
+@keyframes fill-scroll2 {
+	to {
+		transform: translate(-50%, -100%);
+	}
+}
+
+.img1,
+.img2,
+.img3,
+.img4,
+.img5,
+.img6,
+.img7,
+.img8,
+.imgRight1,
+.imgRight2,
+.imgRight3,
+.imgRight4,
+.imgRight5,
+.imgRight6,
+.imgRight7,
+.imgRight8,
+.imgRight9 {
+	position: absolute;
+	animation-name: fill-scroll;
+	animation-timing-function: linear;
+	animation-timeline: scroll();
+}
+
+.img1 {
+	left: 51px;
+}
+
+.img2 {
+	left: 253px;
+	top: 99px;
+}
+
+.img3 {
+	top: 178px;
+	left: 126px;
+}
+
+.img4 {
+	top: 240px;
+	left: -5px;
+}
+
+.img5 {
+	top: 345px;
+	left: 114px;
+}
+
+.img6 {
+	top: 284px;
+	left: 238px;
+}
+
+.img7 {
+	top: 404px;
+}
+
+.img8 {
+	top: 448px;
+	left: 145px;
+}
+
+.imgRight1 {
+	top: 14px;
+	right: 146px;
+}
+
+.imgRight2 {
+	top: 9px;
+	right: -50%;
+}
+
+.imgRight3 {
+	top: 148px;
+	right: 117px;
+}
+
+.imgRight4 {
+	top: 178px;
+	right: 237px;
+}
+
+.imgRight5 {
+	top: 273px;
+	right: 128px;
+}
+
+.imgRight6 {
+	top: 221px;
+	right: -2px;
+}
+
+.imgRight7 {
+	top: 368px;
+	right: 250px;
+}
+
+.imgRight8 {
+	top: 401px;
+	right: 56px;
+}
+
+.imgRight9 {
+	top: 357px;
+	right: 80%;
+}
+
+.launchPcInner {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 694px;
+	animation-name: fill-scroll2;
+	animation-timing-function: linear;
+	animation-timeline: scroll();
+}
+
+.imgWindow {
+	margin-bottom: 26px;
+}
+
+.launchPcName {
+	@include subtitle;
+}
+
+.launchPcTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.launchPcSub {
+	@include subtitle;
+	color: $base-color;
+}
+
+.launchPcBlock {
+	display: flex;
+	gap: 18px;
+}
+
+.launchPcBlockBtn1,
+.launchPcBlockBtn2,
+.launchPcBlockBtn3 {
+	@include btnReg;
+	padding: 13px 18px;
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.sectionBlock {
+	padding: $padding;
+}
+
+.sectionInner {
+	@include sectionBlockStyle();
+}
+
+.sectionHowItWorkInner {
+	position: absolute;
+	top: 80px;
+	left: 38px;
+	width: 394px;
+}
+
+.sectionHowItWorkTitle,
+.hamachiTitle,
+.servUniteTitle,
+.eventsTitle,
+.gameDayTitle,
+.instructionTitle {
+	font-size: $calcFont;
+	margin-bottom: $margin-bottom;
+}
+
+.HowItWorkImg {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 527px;
+	height: 430px;
+}
+
+.sectionInnerHamachi {
+	@include sectionBlockStyle();
+	flex-direction: row-reverse;
+
+	&:hover {
+		.hamachiLink {
+			@include linkHover();
+		}
+		.hamachiImg {
+			@include imgHover();
+		}
+	}
+}
+
+.hamachiSub{
+	margin-bottom: 144px;
+}
+
+.hamachi {
+	position: absolute;
+	top: 80px;
+	right: 49px;
+	width: 479px;
+}
+
+.hamachiLink {
+	@include links();
+}
+
+.hamachiImg {
+	left: 0;
+	@include img();
+}
+
+.sectionInnerServ {
+	@include sectionBlockStyle();
+
+	&:hover {
+		.servUniteLink {
+			@include linkHover();
+		}
+		.servUniteImg {
+			@include imgHover();
+		}
+	}
+}
+
+.servUnite {
+	position: absolute;
+	top: 80px;
+	left: 38px;
+	width: 467px;
+}
+
+.servUniteTitle {
+	width: 369px;
+}
+
+.servUniteSub,
+.eventsSub {
+	margin-bottom: 100px;
+}
+
+.servUniteImg {
+	top: 45px;
+	right: 72px;
+	@include img();
+}
+
+.servUniteLink {
+	@include links();
+}
+
+.sectionInnerEvents {
+	@include sectionBlockStyle();
+	flex-direction: row-reverse;
+
+	&:hover {
+		.eventsLink {
+			@include linkHover();
+		}
+		.eventsImg {
+			@include imgHover();
+		}
+	}
+}
+
+.events {
+	width: 490px;
+}
+
+.eventsLink {
+	@include links();
+}
+
+.eventsImg {
+	bottom: 0;
+	left: 115px;
+	@include img();
+}
+
+.sectionInnerGameDay {
+	@include sectionBlockStyle();
+
+	&:hover {
+		.gameDayLink {
+			@include linkHover();
+		}
+		.gameDayImg {
+			@include imgHover();
+		}
+	}
+}
+
+.gameDay {
+	position: absolute;
+	top: 80px;
+	left: 38px;
+	width: 412px;
+}
+
+.gameDaySub {
+	margin-bottom: 122px;
+}
+
+.gameDayLink {
+	@include links();
+}
+
+.gameDayImg {
+	right: 0;
+	@include img();
+}
+
+.sectionInnerInstall {
+	@include sectionBlockStyle();
+	flex-direction: row-reverse;
+
+	&:hover {
+		.instructionLink {
+			@include linkHover();
+		}
+		.instructionImg {
+			@include imgHover();
+		}
+	}
+}
+
+.instruction {
+	position: absolute;
+	top: 80px;
+	right: 38px;
+	width: 490px;
+}
+
+.instructionSub {
+	margin-bottom: 127px;
+}
+
+.instructionLink {
+	@include links();
+}
+
+.instructionImg {
+	position: absolute;
+	top: 57px;
+	left: 45px;
+	@include img();
+}
+
+.servicesGameSection {
+	padding: $padding;
+}
+
+.servicesGameTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.servicesGameSub {
+	@include subtitle;
+	margin-bottom: 72px;
+}
+
+.sliderContainer {
+	position: relative;
+	padding: 0 60px;
+	width: 100%;
+}
+
+.sliderItem {
+	width: 100%;
+}
+
+.carouselCell {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 299px;
+	height: 519px;
+	margin-right: 40px;
+	border-radius: 36px;
+	background: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 100%,
+		rgba(0, 0, 0, 0.12) 48.88%,
+		rgba(0, 0, 0, 0.48) 74.43%,
+		rgba(0, 0, 0, 0.8) 100%
+	);
+}
+.carousel-cell.size-180 {
+	width: 180px;
+}
+.carousel-cell.size-large {
+	width: 75%;
+}
+
+.carouselCellTitle {
+	position: absolute;
+	bottom: 20%;
+	text-align: center;
+	z-index: 20;
+	font-size: 36px;
+	font-weight: 800;
+	line-height: 110%; /* 39.6px */
+}
+
+.carouselCellTitleKing {
+	position: absolute;
+	text-align: center;
+	bottom: 12%;
+	font-size: 36px;
+	font-weight: 800;
+	line-height: 110%; /* 39.6px */
+}
+
+.popularGame {
+	padding: $padding;
+}
+
+.popularGameTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.popularGameSub {
+	@include subtitle;
+	color: $base-color;
+	margin-bottom: 72px;
+}
+
+.popularGameList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 72px 35px;
+}
+.popularGameListItem {
+	width: 310px;
+	height: 480px;
+	border-radius: $border-radius;
+	background-color: $bgColor-block;
+}
+
+.popularGameItemBlock {
+	padding: 30px 24px;
+}
+
+.popularGameItemSub {
+	@include subtitle;
+	font-size: 16px;
+	text-align: left;
+	margin-bottom: 14px;
+}
+
+.popularGameItemTitle {
+	font-size: 24px;
+	font-weight: 800;
+	line-height: 110%; /* 26.4px */
+	letter-spacing: -0.24px;
+}

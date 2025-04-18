@@ -1,0 +1,70 @@
+@import './App.module.scss';
+
+.newsMain {
+	padding: 180px 0;
+}
+
+.newsInnerMainSub {
+	@include subtitle;
+}
+
+.newsInnerMainTitle {
+	@include titleSection;
+}
+.newsInnerCard {
+	padding: $padding;
+}
+
+.newsPreview {
+	padding: 80px 0;
+}
+
+.newsPrewiewInnerIMg {
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.newsPrewiewInner {
+	padding: 40px 0;
+}
+
+.newsPrewiewInnerSub,
+.newsPrewiewInnerSub1 {
+	@include subtitle;
+	text-align: left;
+}
+
+.newsPrewiewInnerSub1{
+  margin-bottom: 80px;
+}
+
+.newsPrewiewInnerTitle {
+	@include titleSection;
+	text-align-last: left;
+	margin-bottom: 20px;
+}
+
+.newsPrewiewInnerText{
+  margin-bottom: 58px;
+}
+
+.newsPrewiewInnerTextList{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.newsPrewiewInnerTextItemCont {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 110%; /* 17.6px */
+	letter-spacing: -0.16px;
+  margin-bottom: 20px;
+}
+
+.newsPrewiewInnerTitleSoc{
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 17px;
+}
+

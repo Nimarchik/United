@@ -1,0 +1,270 @@
+@import './App.module.scss';
+
+.parters {
+	padding: 180px 0 127px;
+}
+.partersBlocks,
+.allParters,
+.newPartners {
+	padding: $padding;
+}
+
+
+
+.partersInnerTitle,
+.newPartnersInnerTitle,
+.newPartnersTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.partersInnerSub,
+.newPartnersInnerSub,
+.newPartnersSub {
+	@include subtitle;
+	color: $base-color;
+}
+
+.partersBlocksPartners {
+	@include sectionNewStyle;
+
+	&:hover {
+		.partersBlocksPartnersImg {
+			transform: scale(1.1);
+			filter: drop-shadow(0 0 5px $bgColor-btn-hover);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.partersBlocksNeParner {
+	@include sectionNewStyle;
+
+	&:hover {
+		.partersBlocksNeParnerContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+
+		.partersBlocksNeParnerImg {
+			transform: scale(1.1);
+			filter: drop-shadow(0 0 5px $bgColor-btn-hover);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.partersBlocksPartnersCont {
+	width: $width-sectionNewStyleCont2;
+	margin-right: 38px;
+}
+
+.partersBlocksPartnersContTitle,
+.partersBlocksNeParnerContTitle {
+	font-size: $calcFont;
+	margin-bottom: $margin-bottom;
+}
+
+.partersBlocksNeParnerContSub {
+	margin-bottom: 117px;
+}
+
+.partersBlocksNeParnerContLink {
+	display: inline-block;
+	padding: 5px;
+	border-radius: $border-radius-card;
+	transition: all 0.5s;
+}
+
+.partersBlocksPartnersImg {
+	margin-left: 16px;
+	transition: all 0.8s;
+}
+
+.partersBlocksNeParnerImg {
+	margin-right: 109px;
+	transition: all 0.8s;
+}
+
+.favorits {
+	padding: $padding;
+}
+
+.favoritsInnerTitle {
+	@include titleSection;
+	margin-bottom: 70px;
+}
+
+.favoritsInnerList {
+	display: flex;
+	gap: 35px;
+}
+
+.favoritsInnerItem {
+	padding: 38px 24px;
+	background-color: $bgColor-block;
+	border-radius: $border-radius-card;
+}
+
+.favoritsInnerItemImg {
+	margin-bottom: 11px;
+}
+
+.favoritsInnerItemSub {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.allPartersInnerTitle {
+	@include titleSection;
+	margin-bottom: 72px;
+}
+
+.allPartersInnerList {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 72px;
+}
+
+.allPartersInnerItem {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 11px 21px;
+	transition: all 0.5s;
+	z-index: 2;
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		width: 0;
+		height: 100%;
+		border-radius: 10px;
+		background-color: $bgColor-block;
+		transition: all 0.5s;
+		z-index: -1;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		width: 0;
+		height: 100%;
+		border-radius: 10px;
+		background-color: $bgColor-block;
+		transition: all 0.5s;
+		z-index: -1;
+	}
+}
+
+.allPartersInnerItemLink {
+	position: relative;
+	font-size: $clampText;
+	z-index: 2;
+}
+
+.allPartersInnerItemActive {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 11px 21px;
+	font-size: $clampText;
+	// background-color: $bgColor-block;
+	border-radius: $border-radius-card;
+	transition: all 0.5s;
+
+	&::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		background-color: $bgColor-block;
+		transition: all 0.5s;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 10px;
+		background-color: $bgColor-block;
+		transition: all 0.5s;
+		z-index: -1;
+	}
+}
+
+.allPartersInnerPeviewList {
+  position: relative;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	transform: translateX(0%);
+	gap: 35px;
+}
+.allPartersInnerPeviewListActive{
+  display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	transform: translateX(100%);
+	gap: 35px;
+}
+
+
+
+.allPartersInnerPeviewItem {
+	width: 310px;
+	height: 388px;
+	padding: 43px 24px;
+	border-radius: $border-radius-card;
+	background-color: $bgColor-block;
+}
+
+.allPartersInnerPeviewItemTitle {
+	font-size: $clampText;
+	margin: 14px 0;
+}
+
+.allPartersInnerPeviewListItemListSub {
+	font-size: 16px;
+}
+
+.allPartersInnerPeviewItemList {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+}
+
+.allPartersInnerPeviewListItemListItem {
+	display: flex;
+	align-items: center;
+}
+
+.newPartnersInner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.newPartnersInnerSub{
+  margin-bottom: 121px;
+}
+
+.newPartnersInnerMaps{
+  width: 1000px;
+  height: 475px;
+  border-radius: $border-radius-card;
+}
+
+.newPartnersSub{
+  margin-bottom: 45px;
+}
+
+.newPartnersBtn{
+  @include btnReg;
+}

@@ -1,0 +1,385 @@
+@import './App.module.scss';
+
+.donateWrapper {
+	position: relative;
+	padding: 160px 0;
+}
+
+.donateWrapper {
+	display: flex;
+	justify-content: space-between;
+}
+
+.donateImgPackLeft,
+.donateImgPackRight {
+	position: relative;
+	height: 600px;
+}
+
+.donateImgPackPicLeft1,
+.donateImgPackPicLeft2,
+.donateImgPackPicLeft3,
+.donateImgPackPicRight1,
+.donateImgPackPicRight2,
+.donateImgPackPicRight3 {
+	position: absolute;
+	animation-name: donateScroll;
+	animation-timing-function: linear;
+	view-timeline-name: --fill-scroll;
+	animation-timeline: --fill-scroll;
+	animation-range: 30% 100%;
+}
+
+@keyframes donateScroll {
+	to {
+		transform: translateY(-200%);
+	}
+}
+
+.donateImgPackPicLeft1 {
+	top: 131px;
+	left: 0;
+}
+
+.donateImgPackPicLeft2 {
+	top: 312px;
+	left: 134px;
+}
+
+.donateImgPackPicLeft3 {
+	top: 523px;
+	left: 54px;
+}
+
+.donateImgPackPicRight1 {
+	top: 110px;
+	right: 46px;
+}
+
+.donateImgPackPicRight2 {
+	top: 336px;
+	right: 0;
+}
+
+.donateImgPackPicRight3 {
+	top: 494px;
+	right: 214px;
+}
+
+.donateTopInner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+.donateTopInnerTitle {
+	font-size: $clampSection;
+	margin-bottom: $margin-bottom;
+}
+
+.donateTopInnerSub {
+	font-size: $clampText;
+	font-family: $Manrope;
+	margin-bottom: $margin-bottom;
+}
+
+.donateTopInnerBtn {
+	@include btnReg;
+}
+
+.donateProject,
+.platform,
+.donateContent {
+	padding: $padding;
+}
+
+.donateContentInner {
+	@include sectionStyle;
+	background-color: $bgColor-block;
+}
+
+.donateContentInnerLink {
+	display: flex;
+	justify-content: space-evenly;
+
+	&:hover {
+		.donateContentInnerBlockText {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+		.donateContentInnerLinkImg {
+			transform: scale(1.05);
+			filter: drop-shadow(0 -10px 10px $base-color);
+			transition: all 0.5s;
+		}
+	}
+}
+
+.donateContentInnerLinkImg {
+	transition: all 0.5s;
+}
+
+.donateContentInnerBlockTitle {
+	font-size: $calcFont;
+	margin-bottom: $margin-bottom;
+}
+
+.donateContentInnerBlockSub {
+	margin-bottom: 117px;
+}
+
+.donateContentInnerBlockSubList {
+	list-style: decimal;
+}
+
+.donateContentInnerBlockSubItem {
+	margin-left: 30px;
+}
+.donateContentInnerBlockText {
+	display: inline-flex;
+	font-size: $clampText;
+	border-radius: $border-radius;
+	padding: 5px;
+	transition: all 0.5s;
+}
+
+.donateGameBonus {
+	padding: $padding;
+}
+
+.donateGameBonusTitle {
+	font-size: $clampSection;
+	text-align: center;
+	margin-bottom: $margin-bottom;
+}
+.donateGameBonusSub {
+	font-size: $clampText;
+	text-align: center;
+	margin-bottom: 72px;
+}
+
+.donateGameBonusList {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 72px 35px;
+}
+
+.donateGameBonusItemInner {
+	padding: 30px 24px;
+	height: 180px;
+	background-color: $bgColor-block;
+}
+.donateGameBonusItem,
+.donateGameBonusItem1,
+.donateGameBonusItem2,
+.donateGameBonusItem3,
+.donateGameBonusItem4,
+.donateGameBonusItem5 {
+	border-radius: $border-radius-card;
+	background-color: $bgColor-block;
+}
+
+.donateGameBonusItem {
+	:hover {
+		.donateGameBonusItemInnerArrow1 {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+.donateGameBonusItem1 {
+	:hover {
+		.donateGameBonusItemInnerArrow2 {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+.donateGameBonusItem2 {
+	:hover {
+		.donateGameBonusItemInnerArrow3 {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+.donateGameBonusItem3 {
+	:hover {
+		.donateGameBonusItemInnerArrow4 {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+.donateGameBonusItem4 {
+	:hover {
+		.donateGameBonusItemInnerArrow4 {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+.donateGameBonusItem5 {
+	:hover {
+		.donateGameBonusItemInnerArrow6 {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+.donateGameBonusItemInnerArrow1,
+.donateGameBonusItemInnerArrow2,
+.donateGameBonusItemInnerArrow3,
+.donateGameBonusItemInnerArrow4,
+.donateGameBonusItemInnerArrow5,
+.donateGameBonusItemInnerArrow6 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 25px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	transition: all 0.4s;
+}
+
+.donateGameBonusItemInnerSub {
+	color: $colot-subtitle;
+	font-size: 14px;
+}
+
+.donateGameBonusItemInnerTitle {
+	height: 52px;
+	margin-bottom: 52px;
+}
+
+.donateGameBonusItemInnerBlock {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.donateGameBonusItemInner {
+	border-bottom-left-radius: $border-radius-card;
+	border-bottom-right-radius: $border-radius-card;
+}
+
+.donateProjectInner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.donateProjectInnerTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.donateProjectInnerSub {
+	@include subtitle;
+	width: 589px;
+	height: 52px;
+	margin: 0 auto;
+	color: $base-color;
+	margin-bottom: 45px;
+}
+
+.donateProjectInnerBtn {
+	@include btnReg;
+}
+
+.platformInner {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.platformInnerImg {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 488px;
+	gap: 20px;
+}
+
+.platformInnerImgPic1,
+.platformInnerImgPic2,
+.platformInnerImgPic3 {
+	width: 230px;
+	height: 300px;
+}
+
+.platformInnerImgPic2 {
+	position: absolute;
+	left: 250px;
+	top: 160px;
+}
+
+.platformInnerContent {
+  position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 384px;
+}
+
+.platformInnerContentTitle {
+	@include titleSection;
+	text-align: start;
+	width: 365px;
+	margin-bottom: 14px;
+}
+
+.platformInnerContentTitle p {
+	height: 70px;
+}
+
+.platformInnerContentSub {
+	margin-bottom: 22px;
+}
+
+.platformInnerContentLinkBlock {
+	display: flex;
+	gap: 14px;
+}
+
+.platformInnerContentLink {
+	@include btnReg;
+	background-color: $base-color;
+	color: $black-color;
+	font-size: 16px;
+	padding: 8px 16px;
+	transition: all 0.4s;
+
+	&:hover {
+		background-color: $colot-subtitle;
+		color: $base-color;
+		transition: all 0.4s;
+	}
+}
+
+.platformInnerContentLink1 {
+	@include btnReg;
+	font-size: 16px;
+	padding: 8px 16px;
+}
+
+.platformInnerContentBg{
+  position: absolute;
+  right: 50px;
+  width: 613px;
+  height: 613px;
+  opacity: 0.15;
+  filter: blur(100px);
+  background-color: $bgColor-btn;
+  z-index: -999;
+}

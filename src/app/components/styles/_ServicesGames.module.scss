@@ -1,0 +1,200 @@
+@import './App.module.scss';
+
+.servicesGames {
+	padding: 160px 0 80px;
+}
+
+.servicesGamesTitles {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.servicesGamesSubs {
+	@include subtitle;
+	color: $base-color;
+	margin-bottom: 75px;
+}
+
+.servicesGamesListGame {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 72px 0;
+}
+
+.servicesGamesListGameItem {
+	position: relative;
+	width: 300px;
+	height: 520px;
+
+}
+
+.servicesGamesListGameItemImg {
+	position: relative;
+	border-radius: 38px;
+
+	z-index: -1;
+}
+
+.servicesGamesListGameItemTitle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 79px;
+	text-align: center;
+	width: 270px;
+	margin: 0 auto;
+}
+
+.sectionPriview {
+	padding: $padding;
+}
+
+.previewBlock {
+	margin-bottom: 55px;
+}
+
+.imgPreview {
+	width: 100%;
+}
+
+.servSubPreview {
+	@include subtitle;
+	// font-size: 16px;
+	margin-top: 80px;
+}
+
+.previewTitle {
+	@include titleSection;
+}
+
+.previewListBtn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 24px;
+	margin-top: 24px;
+	height: 48px;
+}
+
+.previewLink {
+	@include btnReg;
+}
+
+.communityGames {
+	padding: $padding;
+}
+
+.communityGamesBlock {
+	@include sectionStyle;
+	flex-direction: row;
+	background: $bgColor-block;
+	padding: 0;
+	justify-content: start;
+	&:hover {
+		.communityGamesBlockImg {
+			transform: scale(1.08);
+			transition: all 0.8s;
+		}
+		.communityGamesBlockLink {
+			background-color: $base-color;
+			color: #000;
+			transition: all 0.6s;
+		}
+	}
+}
+.communityGamesBlockImg {
+	transition: all 0.8s;
+}
+
+.communityGamesBlockInner {
+	position: absolute;
+	top: 80px;
+	right: 38px;
+}
+
+.communityGamesBlockTitle {
+	margin-bottom: $margin-bottom;
+}
+
+.communityGamesBlockText {
+	margin-bottom: 171px;
+	width: 490px;
+}
+
+.communityGamesBlockLink {
+	display: inline-block;
+	border-radius: $border-radius-card;
+	padding: 3px;
+	transition: all 0.6s;
+}
+
+.systemsReq {
+	padding: 20px 0;
+}
+
+.systemsReqList {
+	display: flex;
+	justify-content: center;
+	gap: 32px;
+}
+
+.systemsReqListItem {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 226px;
+	padding: 35px 0 85px;
+	border-radius: $border-radius-card;
+	text-align: center;
+	background-color: $bgColor-block;
+}
+
+.playres,
+.item,
+.feedback {
+	font-size: $calcFont;
+	font-weight: 800;
+	line-height: 110%; /* 41.8px */
+	letter-spacing: -0.38px;
+}
+
+.playresText {
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 110%; /* 19.8px */
+}
+.trailer {
+	padding: $padding;
+}
+.trailerCont {
+	display: flex;
+	gap: 24px;
+}
+
+.trailerContText {
+	width: 220px;
+	height: 420px;
+	padding: 19px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: normal;
+	background-color: $bgColor-block;
+	border-radius: $border-radius;
+}
+
+.trailerContTitle {
+	@include subtitle;
+	color: $base-color;
+	margin-bottom: 12px;
+	text-align: left;
+}
+
+.iframe {
+	border-radius: $border-radius;
+	border: none;
+	text-align: left;
+}

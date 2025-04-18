@@ -1,0 +1,141 @@
+@import "./App.module.scss";
+
+.buyGames {
+  padding: 180px 0 125px;
+}
+
+.buyGamesBlocks,
+.buyGamesApp {
+  padding: $padding;
+}
+
+.buyGamesInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buyGamesInnerSubGen {
+  @include subtitle;
+}
+
+.buyGamesInnerTitle {
+  @include titleSection;
+  margin-bottom: $margin-bottom;
+}
+
+.buyGamesInnerSub {
+  @include subtitle;
+  color: $base-color;
+}
+
+.buyGamesInnerBtn {
+  @include btnReg;
+}
+
+.buyGamesBlocksInfo {
+  @include sectionNewStyle;
+
+  &:hover {
+    .buyGamesBlocksInfoImg {
+      transform: scale(1.1);
+      transition: all 0.8s;
+    }
+  }
+}
+
+.buyGamesBlocksPlat {
+  @include sectionNewStyle;
+
+  &:hover {
+    .buyGamesBlocksPlatImg {
+      transform: scale(1.1);
+      transition: all 0.8s;
+    }
+  }
+}
+.buyGamesBlocksUse {
+  @include sectionNewStyle;
+
+  &:hover {
+    .buyGamesBlocksUseContLink {
+      background-color: $base-color;
+      color: $black-color;
+      transition: all 0.8s;
+    }
+
+    .buyGamesBlocksUseImg {
+      transform: scale(1.1);
+      transition: all 0.8s;
+    }
+  }
+}
+
+.buyGamesBlocksPlatCont {
+  width: $width-sectionNewStyleCont;
+  margin-bottom: 160px;
+}
+
+.buyGamesBlocksInfoCont,
+.buyGamesBlocksUseCont {
+  width: $width-sectionNewStyleCont2;
+  margin-right: 38px;
+}
+
+.buyGamesBlocksInfoContTitle,
+.buyGamesBlocksPlatContTitle,
+.buyGamesBlocksUseContTitle {
+  font-size: $calcFont;
+  margin-bottom: $margin-bottom;
+}
+
+.buyGamesBlocksInfoContList {
+  list-style: decimal;
+  margin-left: 20px;
+}
+
+.buyGamesBlocksUseContSub {
+  margin-bottom: 144px;
+}
+
+.buyGamesBlocksUseContLink {
+  display: inline-block;
+  padding: 5px;
+  border-radius: $border-radius-card;
+  transition: all 0.4s;
+}
+
+.buyGamesBlocksInfoImg {
+  height: 100%;
+  margin-left: -38px;
+  transition: all 0.8s;
+}
+
+.buyGamesBlocksPlatImg {
+  transition: all 0.8s;
+}
+
+.buyGamesBlocksUseImg {
+  margin-left: 67px;
+  transition: all 0.8s;
+}
+
+.buyGamesAppInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buyGamesAppTitle {
+  @include titleSection;
+  margin-bottom: $margin-bottom;
+}
+
+.buyGamesAppSub {
+  @include subtitle;
+  color: $base-color;
+}
+
+.buyGamesAppLink {
+  @include btnReg;
+}

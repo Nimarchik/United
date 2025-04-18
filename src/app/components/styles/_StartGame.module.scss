@@ -1,0 +1,26 @@
+@import './App.module.scss';
+
+.startGame {
+	padding: $padding;
+}
+
+.startGameInner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	// justify-content: center;
+	gap: 24px;
+}
+
+.startGameTitle {
+	@include titleSection();
+}
+
+.startGameSubtitle {
+	@include subtitle();
+	color: $base-color;
+}
+
+.startGameBtn {
+	@include btnReg;
+}

@@ -1,0 +1,192 @@
+@import './App.module.scss';
+
+.teamsSpeak {
+	padding: 160px 0;
+}
+
+.TeamSpeakTop {
+	text-align: center;
+	margin: 0 auto;
+}
+
+.TeamSpeakTopTitle,
+.mumbleTopInnerTitle {
+	font-size: $clampSection;
+	margin-bottom: $margin-bottom;
+}
+
+.TeamSpeakTopSub,
+.mumbleTopInnerSub {
+	font-size: $clampText;
+	margin-bottom: $margin-bottom;
+}
+
+.TeamSpeakTopBtnBlock {
+	display: flex;
+	justify-content: center;
+	gap: 18px;
+}
+
+.TeamSpeakTopBtnWin,
+.TeamSpeakTopBtnAnd {
+	@include btnReg;
+	align-items: center;
+	gap: 13px;
+}
+.TeamSpeakTopBtnBlockImg {
+	width: 24px;
+	height: 24px;
+}
+
+.teamsSpeakContent {
+	padding: $padding;
+}
+
+.teamsSpeakContentBlock,
+.teamsSpeakContentBlock1,
+.teamsSpeakContentBlock3 {
+	@include sectionStyle;
+	background-color: $bgColor-block;
+	margin-bottom: 20px;
+}
+
+.teamsSpeakContentBlockLink {
+	display: flex;
+	&:hover {
+		.teamsSpeakContentBlockLinkImg,
+		.teamsSpeakContentBlockLinkImg2 {
+			transform: scale(1.1);
+			filter: drop-shadow(0px -10px 10px $base-color);
+			transition: all 0.5s;
+		}
+		.teamsSpeakContentBlockText {
+			color: $black-color;
+			background-color: $base-color;
+			transition: all 0.5s;
+		}
+	}
+}
+
+.teamsSpeakContentBlockLink1 {
+	display: flex;
+	flex-direction: row-reverse;
+
+	&:hover {
+		.teamsSpeakContentBlockText1 {
+			color: $black-color;
+			background-color: $base-color;
+			transition: all 0.5s;
+		}
+		.teamsSpeakContentBlockLinkImg1 {
+			transform: scale(1.1);
+			transition: all 0.5s;
+		}
+	}
+}
+
+.teamsSpeakContentBlockLink3 {
+	display: flex;
+
+	&:hover {
+		.teamsSpeakContentBlockText3 {
+			color: $black-color;
+			background-color: $base-color;
+			transition: all 0.5s;
+		}
+		.teamsSpeakContentBlockLinkImg3 {
+			transform: scale(1.1);
+			filter: drop-shadow(0px -10px 10px $base-color);
+			transition: all 0.5s;
+		}
+		.teamsSpeakContentBlockLinkInnerImgSvg {
+			transform: scale(1.05);
+			filter: drop-shadow(0px 5px 10px $base-color);
+			transition: all 0.5s;
+		}
+	}
+}
+.teamsSpeakContentBlockLinkInnerImgSvg {
+	transition: all 0.5s;
+}
+
+.teamsSpeakContentBlockLinkImg {
+	transition: all 0.5s;
+}
+.teamsSpeakContentBlockText,
+.teamsSpeakContentBlockText1,
+.teamsSpeakContentBlockText3,
+.teamsSpeakContentBlockText3 {
+	display: inline-flex;
+	padding: 5px;
+	border-radius: $border-radius;
+	transition: all 0.6s;
+}
+
+.teamsSpeakContentBlockInner,
+.teamsSpeakContentBlockInner1,
+.teamsSpeakContentBlockInner3 {
+	position: absolute;
+	right: 4%;
+	width: 490px;
+}
+.teamsSpeakContentBlockInner3 {
+	top: 80px;
+	left: 4%;
+}
+
+.teamsSpeakContentBlockInner1 {
+	width: 390px;
+	left: 4%;
+}
+
+.teamsSpeakContentBlockInnerTitle,
+.teamsSpeakContentBlockInnerTitl1,
+.teamsSpeakContentBlockInnerTitle2,
+.teamsSpeakContentBlockInnerTitle3 {
+	font-size: $calcFont;
+	margin-bottom: $margin-bottom;
+}
+
+.teamsSpeakContentBlockInnerSub,
+.teamsSpeakContentBlockInnerSub1,
+.teamsSpeakContentBlockInnerSub2,
+.teamsSpeakContentBlockInnerSub3,
+.teamsSpeakContentBlockInnerSub2Title {
+	font-size: $clampText;
+	margin-bottom: 117px;
+}
+.teamsSpeakContentBlockInnerSub2Title {
+	margin: 0;
+}
+
+.teamsSpeakContentBlockLinkImg1,
+.teamsSpeakContentBlockLinkImg3 {
+	position: relative;
+	right: 15%;
+	transition: all 0.5s;
+}
+.teamsSpeakContentBlockLinkImg2 {
+	position: relative;
+	left: 42px;
+	transition: all 0.5s;
+}
+
+.teamsSpeakContentBlockLinkImg3 {
+	bottom: 28px;
+	left: 59%;
+}
+
+.teamsSpeakContentBlockInnerSub2List {
+	list-style: disc;
+}
+.teamsSpeakContentBlockInnerSub2Item {
+	margin-left: 24px;
+}
+
+.teamsSpeakContentBlockLinkInnerImg {
+	position: absolute;
+	bottom: 78px;
+	right: 40px;
+	display: flex;
+	gap: 48px;
+}

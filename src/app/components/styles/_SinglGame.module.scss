@@ -1,0 +1,90 @@
+@import "./App.module.scss";
+
+.singlGames {
+  padding: 180px 0 80px;
+}
+
+.singlGame,
+.SinglGamesBlock {
+  padding: $padding;
+}
+
+.singlGamesInnerTitle {
+  @include titleSection;
+  margin-bottom: $margin-bottom;
+}
+
+.singlGamesInnerSub {
+  @include subtitle;
+  color: $base-color;
+  margin-bottom: 78px;
+}
+
+.singlGameInnerBlock {
+  @include sectionNewStyle;
+}
+
+.singlGameInnerBlockCont {
+  position: relative;
+  width: 503px;
+  z-index: 10;
+}
+
+.singlGameInnerBlockContTitle {
+  font-size: $calcFont;
+  margin-bottom: $margin-bottom;
+  margin-top: -100px;
+}
+
+.singlGameInnerBlockImg {
+  position: absolute;
+  height: 100%;
+  right: -20px;
+}
+
+.SinglGamesBlockLinkBLocks {
+  @include sectionNewStyle;
+
+  &:hover{
+    .SinglGamesBlockLinkBLocksLink{
+      background-color: $base-color;
+      color: $black-color;
+      transition: all .4s;
+    }
+    .SinglGamesBlockLinkImg{
+      transform: scale(1.1);
+      transition: all .8s;
+    }
+  }
+}
+
+.SinglGamesBlockLinkBLocksCont {
+  position: absolute;
+  width: $width-sectionNewStyleCont2;
+  right: 0;
+  z-index: 20;
+}
+
+.SinglGamesBlockLinkBLocksTitle {
+  font-size: $calcFont;
+  margin-bottom: $margin-bottom;
+}
+
+.SinglGamesBlockLinkBLocksSub {
+  margin-bottom: 165px;
+}
+
+.SinglGamesBlockLinkBLocksLink {
+  display: inline-block;
+  padding: 5px;
+  border-radius: $border-radius-card;
+  transition: all 0.4s;
+}
+
+.SinglGamesBlockLinkImg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all .8s;
+}

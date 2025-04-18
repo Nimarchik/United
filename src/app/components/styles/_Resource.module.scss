@@ -1,0 +1,195 @@
+@import './App.module.scss';
+
+.resource {
+	padding: 180px 0 125px;
+}
+
+.resourceInnerTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.resourceInnerSub {
+	@include subtitle;
+	width: 634px;
+	margin: 0 auto;
+	color: $base-color;
+}
+
+.resourceBlocks {
+	padding: $padding;
+}
+
+.resourceBlocksLink {
+	@include sectionNewStyle;
+	&:hover {
+		.resourceBlocksLinkContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+		.resourceBlocksLinkImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.resourceBlocksLinkRev {
+	@include sectionNewStyle;
+
+
+	&:hover {
+		.resourceBlocksLinkRevContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+		.resourceBlocksLinkRevImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+.resourceBlocksLinkSplash {
+	@include sectionNewStyle;
+
+
+	&:hover {
+		.resourceBlocksLinkSplashContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+		.resourceBlocksLinkSplashImg,
+		.resourceBlocksLinkSplashImgSmart {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.resourceBlocksLinkGraphic {
+	@include sectionNewStyle;
+
+
+	&:hover {
+		.resourceBlocksLinkGraphicContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+		.resourceBlocksLinkGraphicImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.resourceBlocksLinkAds {
+	@include sectionNewStyle;
+	
+
+	&:hover {
+		.resourceBlocksLinkAdsContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+    .resourceBlocksLinkAdsImg {
+      transform: scale(1.1);
+      transition: all 0.8s;
+    }
+	}
+}
+
+.resourceBlocksLinkCont,
+.resourceBlocksLinkSplashCont {
+	width: 394px;
+}
+
+.resourceBlocksLinkRevCont,
+.resourceBlocksLinkGraphicCont {
+	width: 490px;
+	margin-right: 38px;
+}
+
+.resourceBlocksLinkAdsCont {
+	width: 431px;
+}
+
+.resourceBlocksLinkContTitle,
+.resourceBlocksLinkRevContTitle,
+.resourceBlocksLinkSplashContTitle,
+.resourceBlocksLinkGraphicContTitle,
+.resourceBlocksLinkAdsContTitle {
+	font-size: $calcFont;
+	margin-bottom: $margin-bottom;
+}
+
+.resourceBlocksLinkContSub {
+	margin-bottom: 117px;
+}
+.resourceBlocksLinkRevContSub,
+.resourceBlocksLinkSplashContSub,
+.resourceBlocksLinkAdsContSub {
+	margin-bottom: 144px;
+}
+
+.resourceBlocksLinkGraphicContSub {
+	margin-bottom: 171px;
+}
+
+.resourceBlocksLinkContLink,
+.resourceBlocksLinkRevContLink,
+.resourceBlocksLinkSplashContLink,
+.resourceBlocksLinkGraphicContLink,
+.resourceBlocksLinkAdsContLink {
+	display: inline-flex;
+	padding: 5px;
+	border-radius: $border-radius;
+	transition: all 0.5s;
+}
+
+.resourceBlocksLinkImg {
+	width: 297px;
+	height: 174px;
+	margin-right: 115px;
+	transition: all 0.8s;
+}
+
+.resourceBlocksLinkRevImg {
+	margin-left: 58px;
+	transition: all 0.8s;
+}
+
+.resourceBlocksLinkSplashBlockImg {
+	position: relative;
+	display: flex;
+	width: 430px;
+	height: 301px;
+	margin-right: 101px;
+}
+
+.resourceBlocksLinkSplashImg {
+	position: absolute;
+	top: 55px;
+	transition: all 0.8s;
+}
+
+.resourceBlocksLinkSplashImgSmart {
+	position: absolute;
+	top: 0;
+	right: -60px;
+	transition: all 0.8s;
+}
+
+.resourceBlocksLinkGraphicImg {
+	margin-left: 90px;
+	transition: all 0.8s;
+}
+
+.resourceBlocksLinkAdsImg {
+	margin-right: 38px;
+	transition: all 0.8s;
+}

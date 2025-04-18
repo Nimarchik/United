@@ -1,0 +1,107 @@
+@import './App.module.scss';
+
+.contact {
+	padding: 160px 0 80px;
+}
+
+.contactInnerSub {
+	@include subtitle;
+}
+
+.contactInnerTitle {
+	@include titleSection;
+	margin-bottom: 72px;
+}
+
+.contactInnerBlock {
+	display: flex;
+	justify-content: space-between;
+}
+
+.contactInnerBlockICQ,
+.contactInnerBlockMob {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 490px;
+	height: 590px;
+	border-radius: $border-radius;
+	background: $bgColor-block;
+	transition: all 0.5s;
+}
+
+.contactInnerBlockICQ {
+	&:hover {
+		box-shadow: 0 0 10px greenyellow;
+		transition: all 0.5s;
+
+		.contactInnerBlockICQImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.contactInnerBlockMob {
+	&:hover {
+		box-shadow: 0 0 10px $bgColor-btn-hover;
+		transition: all 0.5s;
+
+		.contactInnerBlockMobImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.contactInnerBlockICQImg,
+.contactInnerBlockMobImg {
+	width: 329px;
+	height: 329px;
+	transition: all 0.8s;
+}
+
+.contactInnerBlockICQCont,
+.contactInnerBlockMobCont {
+	width: 405px;
+}
+
+.contactInnerBlockICQTitle,
+.contactInnerBlockMobTitle {
+	font-size: $calcFont;
+	margin-bottom: 10px;
+}
+
+.contactInnerBlockICQSub,
+.contactInnerBlockMobTel {
+	margin-bottom: 20px;
+}
+
+.contactInnerBlockMobTel,
+.contactInnerBlockMobPostLink {
+	display: inline-block;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: -5px;
+		width: 0;
+		height: 1px;
+		box-shadow: 0 4px 10px $bgColor-btn-hover;
+		background-color: $bgColor-btn;
+		transition: all 0.5s;
+	}
+
+	&:hover {
+		&::after {
+			content: '';
+			position: absolute;
+
+			left:  0;
+			width: 100%;
+			transition: all 0.5s;
+		}
+	}
+}

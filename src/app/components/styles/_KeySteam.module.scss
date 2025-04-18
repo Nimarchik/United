@@ -1,0 +1,149 @@
+@import './App.module.scss';
+
+.keySteam {
+	padding: 180px 0 125px;
+}
+
+.KeySteamInner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.KeySteamInnerSubs {
+	@include subtitle;
+}
+
+.KeySteamInnerTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.KeySteamInnerSub {
+	margin-bottom: $margin-bottom;
+}
+
+.KeySteamInnerLink {
+	@include btnReg;
+}
+
+.KeySteamBlocks {
+	padding: $padding;
+}
+
+.KeySteamBlocksGeneral {
+	@include sectionNewStyle;
+
+	&:hover {
+		.KeySteamBlocksGeneralImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.KeySteamBlocksKeys {
+	@include sectionNewStyle;
+	&:hover {
+		.KeySteamBlocksKeysImg {
+			transform: scale(1.1) translateX(10%);
+			transition: all 0.8s;
+		}
+		.KeySteamBlocksKeysContLink {
+			background-color: $base-color;
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+.KeySteamBlocksGame {
+	@include sectionNewStyle;
+
+	&:hover {
+		.KeySteamBlocksGameImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.KeySteamBlocksWarning {
+	@include sectionNewStyle;
+
+	&:hover {
+		.KeySteamBlocksWarningImg {
+			transform: scale(1.1);
+			transition: all 0.8s;
+		}
+	}
+}
+
+.KeySteamBlocksGeneralCont {
+	width: $width-sectionNewStyleCont;
+}
+
+.KeySteamBlocksKeysCont,
+.KeySteamBlocksGameCont,
+.KeySteamBlocksWarningCont {
+	width: $width-sectionNewStyleCont2;
+}
+
+.KeySteamBlocksGameCont {
+	position: relative;
+	top: -80px;
+}
+.KeySteamBlocksWarningCont {
+	position: relative;
+	top: -80px;
+	margin-right: 38px;
+}
+
+.KeySteamBlocksGeneralContTitle,
+.KeySteamBlocksKeysContTitle,
+.KeySteamBlocksGameContTitle,
+.KeySteamBlocksWarningContTitle {
+	margin-bottom: $margin-bottom;
+	font-size: $calcFont;
+	font-style: normal;
+	font-weight: 800;
+	line-height: 115%; /* 43.7px */
+	letter-spacing: -0.57px;
+	width: 500px;
+}
+
+.KeySteamBlocksKeysContSubList {
+	list-style: decimal;
+	margin-left: 25px;
+	margin-bottom: 135px;
+}
+.KeySteamBlocksGameContSubList {
+	list-style-type: ' - ';
+	margin-left: 16px;
+}
+
+.KeySteamBlocksKeysContLink {
+	display: inline-flex;
+	padding: 5px;
+	border-radius: $border-radius;
+	transition: all 0.5s;
+}
+
+.KeySteamBlocksGeneralImg {
+	margin-right: 51px;
+	transition: all 0.8s;
+}
+
+.KeySteamBlocksKeysImg {
+	margin-left: -35px;
+	transition: all 0.8s;
+}
+
+.KeySteamBlocksGameImg {
+	transition: all 0.8s;
+}
+
+.KeySteamBlocksWarningImg {
+	position: relative;
+	top: -30px;
+	transition: all 0.8s;
+}

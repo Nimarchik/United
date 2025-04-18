@@ -1,0 +1,1193 @@
+@import "./App.module.scss";
+
+@media screen and (max-width: 768px) {
+  .sectionOurProduct {
+    padding: 80px 0 10px;
+  }
+  .popularGame,
+  .KeySteamBlocks {
+    padding: 10px 0;
+  }
+
+  .navMedia {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    // z-index: 20;
+    border: 1px solid rgba(63, 63, 74, 0.6);
+    background: rgba($color: #222228, $alpha: 0.1);
+    transition: all 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #222228, $alpha: 0.2);
+      backdrop-filter: blur(15px);
+      z-index: 1;
+    }
+  }
+
+  .navMediaHiden {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100vh;
+    // z-index: 20;
+    transform: translateX(100%);
+    border: 1px solid rgba(63, 63, 74, 0.6);
+    background: rgba($color: #222228, $alpha: 0.1);
+    transition: all 0.4s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #222228, $alpha: 0.2);
+      backdrop-filter: blur(15px);
+      z-index: 1;
+    }
+  }
+
+  .navBtnReg,
+  .listLang {
+    position: relative;
+    z-index: 20;
+  }
+
+  .nav {
+    justify-content: space-between;
+  }
+
+  .navList {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    gap: 2px;
+    border-radius: 10px;
+    background-color: $bgColor-btn;
+    z-index: 20;
+    transition: all 0.4s;
+  }
+
+  .menuActive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    gap: 2px;
+    border-radius: 10px;
+    z-index: 20;
+    background-color: $base-color;
+    transition: all 0.4s;
+  }
+
+  .line1,
+  .line2,
+  .line3 {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: $base-color;
+    transition: all 0.4s;
+  }
+
+  .line1Active,
+  .line2Active,
+  .line3Active {
+    display: block;
+    width: 16px;
+    height: 2px;
+    background-color: $black-color;
+    transition: all 0.4s;
+  }
+
+  .line1Active {
+    transform: rotate(45deg) translateY(2px) translateX(2px);
+  }
+  .line3Active {
+    transform: rotate(-45deg) translateY(-3px) translateX(4px);
+  }
+
+  .line2Active {
+    width: 0;
+    transition: all 0.1s;
+  }
+
+  .navListLink {
+    &::after {
+      width: 100%;
+    }
+
+    &:hover {
+      .navListItemList {
+        position: relative;
+        transform: translateY(0%);
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 20px;
+        z-index: 100;
+      }
+    }
+  }
+
+  .navListLink1 {
+    &:hover {
+      .navListItemList1 {
+        position: relative;
+        transform: translateY(0%);
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 20px;
+        z-index: 100;
+      }
+    }
+  }
+
+  .navListLink3 {
+    transform: translateY(0%);
+
+    top: 0;
+    right: 0;
+    left: 0;
+    &:hover {
+      .navListItemList3 {
+        position: relative;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin-top: 20px;
+        z-index: 100;
+      }
+    }
+  }
+
+  .innerUnite {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 88px;
+  }
+
+  .innerContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .innerLogo {
+    width: 172px;
+    height: 74px;
+  }
+
+  .innerContentNavig {
+    flex-direction: column;
+  }
+
+  .innerContentList {
+    flex-direction: row;
+  }
+
+  .innerContentTitle {
+    width: 608px;
+  }
+  .innerContentSubtitle {
+    width: 542px;
+  }
+
+  .innerUnitePictures {
+    width: 670px;
+    height: 414px;
+  }
+
+  .gameInc {
+    align-items: flex-start;
+  }
+
+  .gameIncInner {
+    transform: translate(-50%, -100%);
+  }
+
+  .lanchPcImgPakRight1 {
+    right: 0;
+    top: 200px;
+  }
+  .lanchPcImgPakLeft1 {
+    left: 0;
+    top: 200px;
+  }
+
+  .innerDownoladBlock2,
+  .innerDownoladBlock1 {
+    width: 354px !important;
+    height: 418px !important;
+  }
+  .blockImg2 {
+    width: 95px;
+    height: 202px;
+  }
+  .blockImg1 {
+    width: 304px;
+    height: 176px;
+  }
+  .blocksTitle2,
+  .blocksTitle1,
+  .socialInnerIcqTitle,
+  .socialInnerInstTitle {
+    font-size: 28px;
+  }
+
+  .infoList {
+    justify-content: center;
+  }
+
+  .infoListItem1,
+  .infoListItem2,
+  .infoListItem3,
+  .infoListItem4 {
+    width: 172px;
+    height: 104px;
+    font-size: 22px;
+  }
+
+  .socialInnerInst,
+  .socialInnerIcq {
+    width: 354px;
+    height: 504px;
+  }
+
+  .socialInnerIcqPic {
+    width: 177px;
+    height: 348px;
+  }
+
+  .socialInnerInstBlockImg {
+    position: relative;
+    bottom: 40px;
+  }
+  .socialInnerInstBlockImgPic {
+    width: 92px;
+    height: 190px;
+  }
+  .partnersBlockImg {
+    right: 0;
+  }
+  // .popularGameInnerImg {
+  //   width: 543px;
+  //   height: 338px;
+  // }
+
+  .innerServicesGame,
+  .popularGameInner,
+  .communityInner,
+  .otherServicesInnerSteam,
+  .partnersInner,
+  .keySteamInner {
+    width: 100%;
+    height: 381px;
+  }
+
+  .voiceSearchPlayer,
+  .helpsContainer {
+    height: 450px;
+  }
+
+  .servPictures,
+  .popularGameInnerImg {
+    width: 450px;
+  }
+  .partnersImg1,
+  .partnersImg2 {
+    width: 218px;
+    height: 126px;
+  }
+  .launchPC {
+    height: 1000px;
+  }
+  .launchPcInner {
+    transform: translate(-50%, 100%);
+  }
+
+  .HowItWorkImg {
+    right: -20%;
+  }
+
+  .hamachi {
+    right: 35px;
+  }
+
+  .hamachiImg {
+    width: 475px;
+    height: 325px;
+  }
+  .hamachi {
+    width: 317px;
+  }
+  .hamachiTitle {
+    font-size: 28px;
+  }
+
+  .hamachiSub {
+    margin-bottom: 128px;
+  }
+
+  .servUnite {
+    width: 340px;
+  }
+
+  .servUniteImg {
+    width: 340px;
+    height: 338px;
+    right: 22px;
+  }
+
+  .events {
+    width: 323px;
+  }
+
+  .eventsImg {
+    width: 340px;
+    left: 92px;
+  }
+
+  .gameDay {
+    width: 372px;
+  }
+  .gameDayImg {
+    right: -20%;
+  }
+  .instruction {
+    width: 317px;
+  }
+  .instructionImg {
+    top: 86px;
+    width: 311px;
+    height: 256px;
+  }
+
+  .popularGameList,
+  .popularGameAndList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .voiceTs,
+  .voiceMumble {
+    width: 354px;
+    height: 418px;
+  }
+  .voiceTsImg,
+  .voiceMumbleImg {
+    position: static;
+  }
+
+  .voiceSearchPlayerSub {
+    margin-bottom: 168px;
+  }
+
+  .helpsContainerSub {
+    margin-bottom: 172px;
+  }
+
+  .sectionAndBlock {
+    width: 286px;
+  }
+
+  .sectionAndImg {
+    width: 430px;
+    height: 521px;
+    right: 41px;
+  }
+
+  .bigColectionsImg {
+    width: 320px;
+    height: 201px;
+  }
+
+  .bigColectionsBlock {
+    width: 301px;
+    right: 55px;
+  }
+
+  .servUniteImg1 {
+    right: -5%;
+    width: 450px;
+    height: 337px;
+  }
+
+  .teamsSpeakContentBlockInner {
+    top: 80px;
+    right: 55px;
+    width: 301px;
+  }
+
+  .teamsSpeakContentBlockInnerSub {
+    margin-bottom: 74px;
+  }
+
+  .teamsSpeakContentBlockInner1,
+  .buyGamesBlocksPlatCont,
+  .KeySteamBlocksGeneralCont {
+    width: 286px;
+  }
+
+  .teamsSpeakContentBlockLinkImg1 {
+    width: 218px;
+    height: 294px;
+  }
+  .teamsSpeakContentBlockInnerSub1 {
+    margin-bottom: 118px;
+  }
+
+  .teamsSpeakContentBlockLinkImg2 {
+    left: -10px;
+  }
+
+  .teamsSpeakContentBlockInner3 {
+    top: 90px;
+    width: 340px;
+  }
+
+  .teamsSpeakContentBlockLinkInnerImgSvg {
+    width: 150px;
+  }
+  .teamsSpeakContentBlockLinkImg3 {
+    left: 50%;
+  }
+
+  .buyGamesBlocksInfoCont {
+    width: 321px;
+    margin-right: 35px;
+  }
+
+  .buyGamesBlocksInfoImg {
+    width: 378px;
+    height: 364px;
+  }
+
+  .buyGamesBlocksPlatImg {
+    width: 345px;
+    height: 342px;
+  }
+
+  .buyGamesBlocksUseCont {
+    width: 323px;
+  }
+
+  .buyGamesBlocksUseImg {
+    width: 200px;
+    height: 300px;
+    margin-left: 87px;
+  }
+
+  .KeySteamBlocksGeneralImg {
+    width: 300px;
+    height: 297px;
+  }
+
+  .KeySteamBlocksGeneral {
+    margin-bottom: 0;
+  }
+
+  .KeySteamBlocksKeysCont {
+    position: absolute;
+    right: 0;
+    margin-right: 62px;
+    width: 294px;
+  }
+
+  .KeySteamBlocksKeysImg {
+    position: absolute;
+    left: 0;
+    width: 357px;
+    height: 215px;
+  }
+
+  .KeySteamBlocksGameImg {
+    position: absolute;
+    width: 310px;
+    height: 340px;
+    right: 86px;
+  }
+
+  .KeySteamBlocksWarningImg {
+    width: 272px;
+    height: 302px;
+  }
+
+  .KeySteamBlocksWarningCont {
+    width: 305px;
+    margin-top: 80px;
+  }
+
+  .servicesGamesListGame {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+
+  .donateWrapper {
+    height: 1000px;
+  }
+
+  .donateImgPackPicLeft1 {
+    width: 271px;
+    height: 275px;
+  }
+  .donateImgPackPicRight3 {
+    top: 107px;
+    right: 0;
+    width: 185px;
+    height: 187px;
+  }
+  .donateImgPackPicRight1 {
+    top: 396px;
+    right: 0;
+    width: 277px;
+    height: 307px;
+  }
+
+  .donateImgPackPicRight2 {
+    top: 150px;
+    right: 216px;
+    width: 246px;
+    height: 255px;
+  }
+  .donateImgPackPicLeft2 {
+    top: 335px;
+    left: 120px;
+    width: 219px;
+    height: 228px;
+  }
+
+  .donateTopInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform: translate(-50%, 140%);
+  }
+
+  .donateTopInnerBtn {
+    display: inline;
+  }
+
+  .donateImgPackPicLeft3 {
+    left: 0;
+    width: 172px;
+    height: 172px;
+  }
+
+  .donateGameBonusList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .donateGameBonusItem1,
+  .donateGameBonusItem2,
+  .donateGameBonusItem3,
+  .donateGameBonusItem4,
+  .donateGameBonusItem5,
+  .donateGameBonusItem {
+    width: 310px;
+  }
+
+  .platformInner {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 86px;
+  }
+
+  .platformInnerContent {
+    width: 566px;
+  }
+  .platformInnerContentTitle {
+    display: flex;
+    width: 100%;
+    font-size: 38px;
+  }
+
+  .aboutInnerListItem {
+    padding: 45px 0;
+    width: 167px;
+    height: 202px;
+  }
+
+  .aboutInnerListItemTitle {
+    width: 100%;
+  }
+
+  .aboutInfoInnerContent {
+    width: 286px;
+  }
+
+  .aboutInfoAimContent {
+    width: 301px;
+    margin: 0 auto;
+  }
+
+  .aboutCultureInnerTitle,
+  .aboutCultureInnerSub,
+  .aboutValuablesInnerTitle {
+    display: block;
+    width: 467px;
+    margin: 0 auto;
+  }
+
+  .aboutCultureInnerTitle,
+  .aboutValuablesInnerTitle {
+    margin-bottom: 24px;
+  }
+
+  .aboutCultureInnerSub,
+  .aboutValuablesInnerSub {
+    margin-bottom: 60px;
+  }
+
+  .aboutCultureInnerBlockCont {
+    width: 377px;
+  }
+
+  .aboutCultureInnerItem,
+  .aboutValuablesInnerItem {
+    padding: 24px 9px 43px 20px;
+    width: 221px;
+    height: 374px;
+  }
+
+  .aboutCultureInnerItemTitle,
+  .aboutValuablesInnerItemTitle {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .aboutCultureInnerItemSub {
+    font-size: 16px;
+  }
+
+  .aboutPartersInnerList {
+    width: 100%;
+  }
+
+  .partersBlocksPartnersImg {
+    width: 265px;
+    height: 143px;
+  }
+
+  .partersBlocksPartnersCont {
+    width: 319px;
+  }
+
+  .partersBlocksNeParnerImg {
+    width: 274px;
+    height: 237px;
+    margin-right: 68px;
+  }
+
+  .partersBlocksNeParnerCont {
+    width: 313px;
+  }
+
+  .allPartersInnerPeviewList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .newPartnersInnerMaps {
+    width: 100%;
+  }
+
+  .comunityInnerBlocksPravImg {
+    margin-left: 80px;
+    width: 149px;
+    height: 308px;
+  }
+
+  .comunityInnerBlocksPravCont {
+    width: 294px;
+  }
+
+  .comunityInnerBlocksHelpsImg {
+    position: absolute;
+    margin: 0;
+    right: 0;
+    bottom: 0;
+    width: 515px;
+    height: 351px;
+  }
+
+  .comunityInnerBlocksHelpsContHelps,
+  .comunityInnerBlocksUniteChannelCont {
+    position: relative;
+    width: 305px;
+    z-index: 20;
+  }
+
+  .comunityInnerBlocksUniteChannelImg {
+    width: 227px;
+    height: 295px;
+    margin-left: 33px;
+    margin-bottom: 91px;
+  }
+
+  .comunityInnerBlocksUniteChannelContSub,
+  .resourceBlocksLinkRevContSub {
+    margin-bottom: 128px;
+  }
+
+  .comunityInnerBlocksChatsImg {
+    position: absolute;
+    right: 0;
+    width: 505px;
+    height: 323px;
+  }
+
+  .comunityInnerBlocksChatsCont {
+    position: absolute;
+    width: 282px;
+    z-index: 15;
+  }
+
+  .contactInnerBlockICQ,
+  .contactInnerBlockMob {
+    padding: 0 22px 0 32px;
+    width: 354px;
+  }
+
+  .contactInnerBlockICQCont,
+  .contactInnerBlockMobCont {
+    width: 100%;
+  }
+
+  .communityGamesBlockInner,
+  .communityGamesBlockText,
+  .SinglGamesBlockLinkBLocksCont {
+    width: 303px;
+  }
+
+  .TeamsUniteFounderInnerList {
+    justify-content: center;
+  }
+
+  .careerInnerBlocksProdCont,
+  .resourceBlocksLinkCont {
+    width: 286px;
+  }
+
+  .careerInnerBlocksYouCont {
+    width: 305px;
+  }
+
+  .resourceBlocksLinkImg {
+    width: 297px;
+    height: 174px;
+  }
+
+  .resourceBlocksLinkRevImg {
+    width: 256px;
+    height: 161px;
+    margin-left: 62px;
+  }
+
+  .resourceBlocksLinkRevCont {
+    width: 301px;
+  }
+
+  .resourceBlocksLinkGraphicImg {
+    width: 233px;
+    height: 216px;
+    margin-left: 42px;
+  }
+
+  .resourceBlocksLinkGraphicCont {
+    width: 294px;
+  }
+
+  .resourceBlocksLinkGraphicContSub {
+    margin-bottom: 140px;
+  }
+
+  .resourceBlocksLinkAdsImg {
+    width: 341px;
+    height: 210px;
+    margin-right: 33px;
+  }
+
+  .resourceBlocksLinkAdsCont {
+    width: 340px;
+  }
+}
+
+@media screen and (max-width: 514px) {
+  .header {
+    width: 100%;
+  }
+
+  .nav {
+    padding: 0 15px;
+  }
+
+  .navMedia {
+    width: 100%;
+  }
+
+  .uniteHome {
+    padding: 110px 0;
+  }
+
+  .innerUnite {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .innerContent {
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .innerContentTitle,
+  .innerContentSubtitle {
+    width: 324px;
+  }
+
+  .gameIncInner {
+    width: 335px;
+    transform: translate(-50%, -100%);
+  }
+
+  .gameInc {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .lanchPcImgPakRight1 {
+    right: 0;
+  }
+
+  .innerUnitePictures {
+    width: 335px;
+    height: 207px;
+    margin: 0 auto;
+  }
+
+  .imgRight44,
+  .img77,
+  .img88,
+  .imgRight88,
+  .imgRight77,
+  .imgRight55,
+  .imgRight11,
+  .imgRight33,
+  .imgRight66 {
+    display: none;
+  }
+
+  .blockTitle {
+    width: 335px;
+  }
+
+  .innerDownload {
+    flex-direction: column;
+  }
+
+  .blockImg2 {
+    width: 158px;
+    height: 252px;
+  }
+  .innerServicesGame,
+  .popularGameInner,
+  .communityInner,
+  .otherServicesInnerSteam,
+  .partnersInner,
+  .keySteamInner {
+    display: flex;
+    flex-direction: column;
+    height: 525px;
+  }
+
+  .servBlockTitle,
+  .popularGameInnerContent {
+    left: 24px;
+    top: 32px;
+  }
+  .servTitle {
+    margin-bottom: 20px;
+  }
+  .servLink,
+  .popularGameInnerContentLink {
+    top: 148px;
+    left: 24px;
+    bottom: inherit;
+  }
+
+  .popularGameInnerLink {
+    top: 178px;
+    left: 20px;
+    bottom: inherit;
+  }
+
+  .servPictures {
+    position: absolute;
+    right: 0;
+    bottom: 77px;
+    width: 100%;
+    height: 155px;
+  }
+  .popularGameInnerContentImg {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 534px;
+    height: 284px;
+    transform: translateX(-62%);
+    background: linear-gradient(
+      180deg,
+      #393942 2.98%,
+      rgba(57, 57, 66, 0.38) 21.82%,
+      rgba(57, 57, 66, 0) 44.55%,
+      rgba(57, 57, 66, 0) 66.98%
+    );
+  }
+
+  .popularGameInner {
+    &:hover {
+      .popularGameInnerContentImg {
+        transform: scale(1.1) translateX(-55%);
+      }
+    }
+  }
+
+  .popularGameInnerImg {
+    width: 438px;
+    height: 274px;
+  }
+
+  .communityInnerContent {
+    width: 270px;
+    top: 32px;
+    left: 24px;
+  }
+
+  .communityInnerContentTitle {
+    margin-bottom: 20px;
+  }
+
+  .newsInnerList {
+    justify-content: center;
+  }
+
+  .infoList {
+    flex-wrap: wrap;
+  }
+
+  .infoListItem1,
+  .infoListItem2,
+  .infoListItem3,
+  .infoListItem4 {
+    padding: 40px 33px 39px 32px;
+    width: 238px;
+  }
+
+  .socialInner {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .socialInnerInst,
+  .socialInnerIcq {
+    width: 335px;
+    height: 478px;
+    padding: 25px 24px 41px;
+  }
+
+  .socialInnerInstBLock img {
+    position: absolute;
+    top: 25px;
+    left: 24px;
+    width: 167px;
+    height: 48px;
+  }
+
+  .socialInnerIcqBlock img {
+    width: 44px;
+    height: 44px;
+  }
+
+  .socialInnerInstTitle {
+    margin-bottom: 75px;
+    margin-top: 63px;
+  }
+
+  .socialInnerIcqPic {
+    width: 168px;
+    height: 330px;
+    right: 18px;
+  }
+
+  .shadow {
+    width: 100%;
+  }
+
+  .footerInner {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+  }
+
+  .footerInnerItemLinkPart,
+  .footerInnerItemLinkDon,
+  .footerInnerItemLinkCom,
+  .footerInnerItemLinkHelp,
+  .footerInnerItemLinkRes,
+  .footerInnerItemLinkLau,
+  .footerInnerItemLinkLauAnd,
+  .footerInnerItemLinkTS,
+  .footerInnerItemLinkMum,
+  .footerInnerItemLinkBuy,
+  .footerInnerItemLinkKey,
+  .footerInnerItemLinkSer,
+  .footerInnerItemLinkSet,
+  .footerInnerItemLinkSingl,
+  .footerInnerItemLinkProg,
+  .footerInnerItemLinkGameAnd,
+  .footerInnerItemLinkAbo,
+  .footerInnerItemLinkTeam,
+  .footerInnerItemLinkCul,
+  .footerInnerItemLinkNew,
+  .footerInnerItemLinkKar,
+  .footerInfoListLinkRules,
+  .footerInfoListLinkPol,
+  .footerInfoListLinkCont {
+    font-size: 12px;
+  }
+
+  .footerInfo {
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+    // justify-content: center;
+  }
+  .footerInfoList {
+    display: none;
+  }
+  .footerInfoListW {
+    display: flex;
+    gap: 15px;
+  }
+
+  .otherSteamBlock {
+    position: absolute;
+    width: 260px;
+    left: 24px;
+  }
+
+  .otherSteamBlockPic {
+    position: absolute;
+    top: 309px;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .otherSteamBlockPicBatt {
+    width: 250px;
+    height: 42px;
+  }
+  .otherSteamBlockPicSteam {
+    width: 150px;
+    height: 44px;
+  }
+  .otherSteamBlockPicEpic {
+    width: 82px;
+    height: 94px;
+  }
+
+  .otherServicesLink {
+    top: 209px;
+    left: 24px;
+    bottom: inherit;
+  }
+
+  .partners {
+    position: initial;
+  }
+
+  .partnersBlockTitle {
+    position: absolute;
+    top: 32px;
+    left: 24px;
+  }
+
+  .partnersImg1 {
+    top: -46px;
+  }
+
+  .partnersImg2 {
+    top: 90px;
+    right: 33px;
+  }
+
+  .partnersSub,
+  .keySteamSub {
+    width: 266px;
+  }
+
+  .partnersLink,
+  .keySteamLink {
+    top: 147px;
+    left: 24px;
+    bottom: inherit;
+  }
+
+  .keySteamBlockTitle{
+    position: absolute;
+    top: 32px;
+    left: 24px;
+  }
+
+  .keySteamImg {
+    position: absolute;
+    top: 212px;
+    left: 10px;
+  }
+}

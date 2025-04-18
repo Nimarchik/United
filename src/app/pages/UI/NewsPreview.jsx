@@ -1,0 +1,260 @@
+import { useEffect, useState } from 'react'
+import { useLocation } from 'react-router'
+import styles from '../../components/styles/App.module.css'
+import useLangChange from '../LangChange'
+import { Link } from 'react-router-dom'
+import NewsEvents from '../../shared/NewsEvents'
+import Helps from '../../shared/Helps'
+import StartGame from './StartGame'
+
+const NewsPreview = () => {
+	const location = useLocation()
+	const [items, setItems] = useState(location.state?.items || [])
+
+	useEffect(() => {
+		if (location.state && location.state.items) {
+			setItems(location.state.items)
+		}
+		localStorage.getItem('value')
+	}, [location.state])
+
+	return (
+		<>
+			<main className={styles.main}>
+				<section className={styles.newsPreview}>
+					<img className={styles.newsPrewiewInnerIMg} src={items.img} alt='' />
+					<div className={styles.container}>
+						<div className={styles.newsPrewiewInner}>
+							<p className={styles.newsPrewiewInnerSub}>
+								{useLangChange(items.subGenre)}
+							</p>
+							<h1 className={styles.newsPrewiewInnerTitle}>
+								{useLangChange(items.title)}
+							</h1>
+							<p className={styles.newsPrewiewInnerSub1}>
+								{useLangChange(items.data)}
+							</p>
+
+							<div className={styles.newsPrewiewInnerText}>
+								<ul className={styles.newsPrewiewInnerTextList}>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey2)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey3)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey3)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey4)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey5)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey6)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey7)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey8)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey9)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey10)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey11)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey12)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey13)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey14)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey15)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey16)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey17)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey18)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey19)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey20)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey21)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey22)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey23)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey24)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey25)}
+										</p>
+									</li>
+									<li className={styles.newsPrewiewInnerTextItem}>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey26)}
+										</p>
+										<p className={styles.newsPrewiewInnerTextItemCont}>
+											{useLangChange(items.descriptionKey27)}
+										</p>
+									</li>
+								</ul>
+							</div>
+
+							<h2 className={styles.newsPrewiewInnerTitleSoc}>
+								{useLangChange('newsPrewiewInnerTitleSoc')}
+							</h2>
+							<ul className={styles.footerInfoList}>
+								<li className={styles.footerInfoListItem}>
+									<Link>
+										<svg
+											className={styles.tiktok}
+											xmlns='http://www.w3.org/2000/svg'
+											width='48'
+											height='48'
+											viewBox='0 0 37 38'
+											fill='inherit'
+										>
+											<path
+												opacity='0.1'
+												fillRule='evenodd'
+												clipRule='evenodd'
+												d='M18.5 36.5C28.165 36.5 36 28.665 36 19C36 9.33502 28.165 1.5 18.5 1.5C8.83502 1.5 1 9.33502 1 19C1 28.665 8.83502 36.5 18.5 36.5Z'
+												stroke='white'
+												strokeWidth='1.5'
+											/>
+											<path
+												className={styles.tiktok}
+												d='M25.9997 14.9043C24.8249 14.9043 23.6983 14.4402 22.8676 13.6143C22.037 12.7883 21.5703 11.6681 21.5703 10.5H18.4057V22.8214C18.4051 23.3832 18.2268 23.9305 17.8958 24.3858C17.5649 24.8412 17.0983 25.1814 16.562 25.3583C16.0258 25.5352 15.4472 25.5397 14.9081 25.3714C14.3691 25.203 13.8971 24.8703 13.5589 24.4202C13.2207 23.9702 13.0336 23.4258 13.024 22.8641C13.0144 22.3024 13.1828 21.752 13.5054 21.2908C13.828 20.8296 14.2884 20.4811 14.8213 20.2946C15.3543 20.1081 15.9327 20.0932 16.4747 20.2518V17.1931C15.3229 17.0386 14.1511 17.2373 13.1159 17.7625C12.0806 18.2876 11.2311 19.1143 10.6808 20.1322C10.1305 21.1501 9.90561 22.3106 10.0361 23.4589C10.1667 24.6072 10.6464 25.6886 11.4114 26.5586C12.1763 27.4287 13.1899 28.046 14.317 28.3281C15.444 28.6103 16.6308 28.5438 17.7189 28.1377C18.807 27.7315 19.7445 27.005 20.4064 26.055C21.0682 25.1051 21.4229 23.977 21.4229 22.8214L21.5153 16.5933C22.8155 17.5424 24.387 18.0531 26 18.0507L25.9997 14.9043Z'
+												fill='white'
+												fillOpacity='0.6'
+											/>
+										</svg>
+									</Link>
+								</li>
+								<li className={styles.footerInfoListItem}>
+									<Link>
+										<svg
+											className={styles.footerInstagram}
+											xmlns='http://www.w3.org/2000/svg'
+											width='48'
+											height='48'
+											viewBox='0 0 37 38'
+											fill='inherit'
+										>
+											<path
+												opacity='0.1'
+												fillRule='evenodd'
+												clipRule='evenodd'
+												d='M18.5 36.5C28.165 36.5 36 28.665 36 19C36 9.33502 28.165 1.5 18.5 1.5C8.83502 1.5 1 9.33502 1 19C1 28.665 8.83502 36.5 18.5 36.5Z'
+												stroke='white'
+												strokeWidth='1.5'
+											/>
+											<path
+												d='M19 12.1265C21.3855 12.1265 21.7108 12.1265 22.6867 12.1265C23.5542 12.1265 23.988 12.3434 24.3133 12.4518C24.747 12.6687 25.0723 12.7771 25.3976 13.1024C25.7229 13.4277 25.9398 13.753 26.0482 14.1867C26.1566 14.512 26.2651 14.9458 26.3735 15.8133C26.3735 16.7892 26.3735 17.006 26.3735 19.5C26.3735 21.994 26.3735 22.2108 26.3735 23.1867C26.3735 24.0542 26.1566 24.488 26.0482 24.8133C25.8313 25.247 25.7229 25.5723 25.3976 25.8976C25.0723 26.2229 24.747 26.4398 24.3133 26.5482C23.988 26.6566 23.5542 26.7651 22.6867 26.8735C21.7108 26.8735 21.494 26.8735 19 26.8735C16.506 26.8735 16.2892 26.8735 15.3133 26.8735C14.4458 26.8735 14.012 26.6566 13.6867 26.5482C13.253 26.3313 12.9277 26.2229 12.6024 25.8976C12.2771 25.5723 12.0602 25.247 11.9518 24.8133C11.8434 24.488 11.7349 24.0542 11.6265 23.1867C11.6265 22.2108 11.6265 21.994 11.6265 19.5C11.6265 17.006 11.6265 16.7892 11.6265 15.8133C11.6265 14.9458 11.8434 14.512 11.9518 14.1867C12.1687 13.753 12.2771 13.4277 12.6024 13.1024C12.9277 12.7771 13.253 12.5602 13.6867 12.4518C14.012 12.3434 14.4458 12.2349 15.3133 12.1265C16.2892 12.1265 16.6145 12.1265 19 12.1265ZM19 10.5C16.506 10.5 16.2892 10.5 15.3133 10.5C14.3374 10.5 13.6867 10.7169 13.1446 10.9337C12.6024 11.1506 12.0602 11.4759 11.5181 12.0181C10.9759 12.5602 10.759 12.994 10.4337 13.6446C10.2169 14.1867 10.1084 14.8374 10 15.8133C10 16.7892 10 17.1145 10 19.5C10 21.994 10 22.2108 10 23.1867C10 24.1627 10.2169 24.8133 10.4337 25.3554C10.6506 25.8976 10.9759 26.4398 11.5181 26.9819C12.0602 27.5241 12.494 27.741 13.1446 28.0663C13.6867 28.2831 14.3374 28.3916 15.3133 28.5C16.2892 28.5 16.6145 28.5 19 28.5C21.3855 28.5 21.7108 28.5 22.6867 28.5C23.6627 28.5 24.3133 28.2831 24.8554 28.0663C25.3976 27.8494 25.9398 27.5241 26.4819 26.9819C27.0241 26.4398 27.241 26.006 27.5663 25.3554C27.7831 24.8133 27.8916 24.1627 28 23.1867C28 22.2108 28 21.8855 28 19.5C28 17.1145 28 16.7892 28 15.8133C28 14.8374 27.7831 14.1867 27.5663 13.6446C27.3494 13.1024 27.0241 12.5602 26.4819 12.0181C25.9398 11.4759 25.506 11.259 24.8554 10.9337C24.3133 10.7169 23.6627 10.6084 22.6867 10.5C21.7108 10.5 21.494 10.5 19 10.5Z'
+												fill='white'
+												fillOpacity='0.6'
+											/>
+											<path
+												d='M19 14.8373C16.3976 14.8373 14.3373 16.8976 14.3373 19.5C14.3373 22.1024 16.3976 24.1627 19 24.1627C21.6024 24.1627 23.6627 22.1024 23.6627 19.5C23.6627 16.8976 21.6024 14.8373 19 14.8373ZM19 22.5361C17.3735 22.5361 15.9639 21.2349 15.9639 19.5C15.9639 17.8735 17.2651 16.4639 19 16.4639C20.6265 16.4639 22.0361 17.7651 22.0361 19.5C22.0361 21.1265 20.6265 22.5361 19 22.5361Z'
+												fill='white'
+												fillOpacity='0.6'
+											/>
+											<path
+												d='M23.7711 15.8133C24.3699 15.8133 24.8554 15.3278 24.8554 14.7289C24.8554 14.1301 24.3699 13.6446 23.7711 13.6446C23.1722 13.6446 22.6867 14.1301 22.6867 14.7289C22.6867 15.3278 23.1722 15.8133 23.7711 15.8133Z'
+												fill='white'
+												fillOpacity='0.6'
+											/>
+										</svg>
+									</Link>
+								</li>
+								<li className={styles.footerInfoListItem}>
+									<Link>
+										{' '}
+										<svg
+											className={styles.footerInq}
+											xmlns='http://www.w3.org/2000/svg'
+											width='48'
+											height='48'
+											viewBox='0 0 37 38'
+											fill='inherit'
+										>
+											<path
+												opacity='0.1'
+												fillRule='evenodd'
+												clipRule='evenodd'
+												d='M18.5 36.5C28.165 36.5 36 28.665 36 19C36 9.33502 28.165 1.5 18.5 1.5C8.83502 1.5 1 9.33502 1 19C1 28.665 8.83502 36.5 18.5 36.5Z'
+												stroke='white'
+												strokeWidth='1.5'
+											/>
+											<path
+												fillRule='evenodd'
+												clipRule='evenodd'
+												d='M17.8176 10.5132C17.6636 10.5334 17.5976 10.551 17.3136 10.6478C16.9024 10.788 16.5481 11.013 16.231 11.3354C15.8423 11.7305 15.5962 12.1832 15.4751 12.726C15.4001 13.0619 15.4 13.602 15.4747 13.9353C15.5703 14.3618 15.6916 14.6232 16.0349 15.1431C16.2478 15.4657 16.7011 16.1397 16.8095 16.295C16.8425 16.3422 16.9717 16.5387 17.0966 16.7317C17.4161 17.2254 17.6364 17.4217 18.001 17.5374C18.2282 17.6095 18.6097 17.6043 18.8282 17.5262C19.1543 17.4096 19.4174 17.1923 19.582 16.9037C19.7684 16.5771 20.7964 14.4207 20.8585 14.2263C20.9599 13.9086 20.994 13.679 20.9931 13.3213C20.9918 12.8225 20.9049 12.459 20.6827 12.0239C20.2954 11.2654 19.6027 10.7343 18.767 10.5553C18.536 10.5058 18.0417 10.4839 17.8176 10.5132ZM24.4416 13.9266C23.8609 14.0343 23.4259 14.2081 23.053 14.4812C22.6967 14.7422 22.563 14.8954 21.6344 16.1057C20.4909 17.5963 20.549 17.5165 20.4855 17.6845C20.3859 17.9478 20.3636 18.0585 20.3636 18.2895C20.3636 18.904 20.6872 19.4409 21.2217 19.7136C21.416 19.8127 21.6361 19.8709 21.9328 19.9016C22.059 19.9146 22.169 19.9295 22.1772 19.9347C22.1854 19.9398 22.2686 19.9535 22.3621 19.965C22.4556 19.9765 22.6146 20.0005 22.7155 20.0184C22.8163 20.0363 23.0202 20.0673 23.1686 20.0873C23.3169 20.1073 23.546 20.1425 23.6776 20.1656C24.3576 20.2847 25.0052 20.3184 25.3909 20.2546C25.7839 20.1897 26.2382 20.003 26.6088 19.7543C26.8724 19.5775 27.2764 19.1763 27.4372 18.9318C27.884 18.2525 28.0802 17.424 27.9699 16.6822C27.862 15.9575 27.5893 15.3898 27.1031 14.8784C26.6802 14.4336 26.2156 14.1639 25.5667 13.9868C25.3816 13.9362 25.3109 13.9292 24.927 13.9233C24.6897 13.9196 24.4712 13.9211 24.4416 13.9266ZM13.0423 15.9757C12.5468 16.0328 12.093 16.2519 11.7234 16.6126C11.4967 16.8339 11.3966 16.9651 11.2704 17.2062C11.0757 17.5782 10.9993 17.9022 11 18.3517C11.0007 18.8087 11.1055 19.1874 11.3365 19.5682C11.4703 19.7889 11.8245 20.1568 12.051 20.3105C12.4572 20.5861 13.035 20.737 13.5024 20.6895C13.7292 20.6664 13.9021 20.6236 14.6136 20.4143C16.1683 19.9569 16.117 19.9745 16.2857 19.8404C16.4088 19.7426 16.4631 19.6808 16.5685 19.5188C16.792 19.1756 16.7983 18.699 16.5845 18.322C16.5362 18.2368 16.284 17.9685 15.7244 17.4066C15.2889 16.9693 14.8688 16.5586 14.791 16.4937C14.3118 16.0944 13.668 15.9037 13.0423 15.9757ZM20.7097 21.0453C20.4266 21.0864 20.1532 21.2366 19.9326 21.4722C19.6646 21.7583 19.5429 22.0666 19.5447 22.4543C19.5452 22.564 19.5552 22.6981 19.5668 22.7524C19.5891 22.8565 19.6057 22.9954 19.6595 23.531C19.6777 23.712 19.7121 24.0179 19.7361 24.2109C19.76 24.404 19.7951 24.6951 19.814 24.858C19.8834 25.4545 19.9621 25.7463 20.1514 26.1082C20.3102 26.4119 20.4297 26.5746 20.6746 26.821C21.0882 27.237 21.553 27.4864 22.1545 27.6149C22.4044 27.6683 22.9344 27.6677 23.1901 27.6137C24.2257 27.3951 25.0351 26.6757 25.365 25.6805C25.6116 24.9366 25.5384 24.0958 25.1668 23.4028C24.9535 23.0051 24.6024 22.6139 24.243 22.3736C24.0133 22.2201 23.9226 22.1743 23.503 22.0005C23.3131 21.9219 22.752 21.6838 22.256 21.4715C21.188 21.0142 21.097 20.9891 20.7097 21.0453ZM16.5247 21.0654C16.4722 21.0759 16.3799 21.101 16.3197 21.1211C16.2147 21.1563 13.8897 22.3766 13.5779 22.5603C12.7878 23.0257 12.2393 23.803 12.0528 24.7219C11.986 25.0509 11.9866 25.6249 12.0541 25.9418C12.1872 26.5669 12.4419 27.0617 12.855 27.4977C13.3808 28.0526 13.8424 28.3019 14.6637 28.4747C14.8575 28.5155 15.454 28.5051 15.6993 28.4568C16.3035 28.3378 16.8436 28.0557 17.2761 27.6332C17.6329 27.2848 17.8203 27.0136 18.0015 26.584C18.1959 26.1231 18.2603 25.7276 18.281 24.8689C18.2882 24.5674 18.3034 24.0985 18.3146 23.8271C18.3258 23.5557 18.3356 23.1115 18.3364 22.8401C18.338 22.2755 18.3244 22.1937 18.1797 21.897C18.107 21.748 18.0496 21.6706 17.8939 21.5113C17.7295 21.3432 17.6669 21.2959 17.494 21.2092C17.3813 21.1527 17.2211 21.092 17.138 21.0744C16.9737 21.0395 16.6763 21.0352 16.5247 21.0654Z'
+												fill='white'
+												fillOpacity='0.6'
+											/>
+										</svg>
+									</Link>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<NewsEvents/>
+					<Helps />
+					<StartGame />
+				</section>
+			</main>
+		</>
+	)
+}
+
+export default NewsPreview

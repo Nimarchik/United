@@ -1,0 +1,126 @@
+@import "./App.module.scss";
+
+.career {
+  padding: 180px 0 105px;
+}
+.careerInnerBlocks {
+  padding: $padding;
+}
+
+.careerInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.careerInnerTitle {
+  @include titleSection;
+}
+
+.careerInnerSub {
+  @include subtitle;
+  color: $base-color;
+  margin-bottom: 0;
+}
+
+.careerInnerBtn {
+  @include btnReg;
+}
+
+.careerInnerBlocksGlobal {
+  @include sectionNewStyle;
+  &:hover {
+    .careerInnerBlocksGlobalImg {
+      transform: scale(1.1);
+      transition: all 0.8s;
+    }
+  }
+}
+
+.careerInnerBlocksProd {
+  @include sectionNewStyle;
+
+  &:hover {
+    .careerInnerBlocksProdImg {
+      transform: scale(1.1);
+      transition: all 0.8s;
+    }
+  }
+}
+
+.careerInnerBlocksYou {
+  @include sectionNewStyle;
+
+  &:hover {
+    .careerInnerBlocksYouContLink {
+      background-color: $base-color;
+      color: $black-color;
+      transition: all 0.4s;
+    }
+    .careerInnerBlocksYouImg {
+      transform: scale(1.1);
+      transition: all 0.8s;
+    }
+  }
+}
+
+.careerInnerBlocksGlobalCont,
+.careerInnerBlocksYouCont {
+  width: $width-sectionNewStyleCont2;
+  margin-right: 38px;
+}
+.careerInnerBlocksYouCont {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+}
+.careerInnerBlocksProdCont {
+  position: relative;
+  width: $width-sectionNewStyleCont;
+  z-index: 10;
+}
+
+.careerInnerBlocksGlobalContTitle,
+.careerInnerBlocksProdContTitle,
+.careerInnerBlocksYouContTitle {
+  font-size: $calcFont;
+  margin-bottom: $margin-bottom;
+}
+
+.careerInnerBlocksGlobalContSub,
+.careerInnerBlocksProdContSub {
+  margin-bottom: $margin-bottom;
+}
+
+.careerInnerBlocksYouContSub {
+  margin-bottom: 100px;
+}
+
+.careerInnerBlocksYouContLink {
+  display: inline-block;
+  padding: 5px;
+  border-radius: $border-radius-card;
+  transition: all 0.4s;
+}
+
+.careerInnerBlocksGlobalImg {
+  transition: all 0.8s;
+}
+
+.careerInnerBlocksProdImg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 750px;
+  height: 100%;
+  transition: all 0.8s;
+}
+
+.careerInnerBlocksYouImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: all 0.8s;
+}

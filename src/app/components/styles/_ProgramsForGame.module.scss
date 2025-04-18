@@ -1,0 +1,71 @@
+@import './App.module.scss';
+
+.programsForGame {
+	padding: 180px 0 80px;
+}
+
+.programsForGameInnerTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.programsForGameInnerSub {
+	@include subtitle;
+	color: $base-color;
+	margin-bottom: 90px;
+}
+
+.programsForGameListItem {
+	&:hover {
+		.programsForGameListItemBLockSubAr {
+			background-color: $base-color;
+			transition: all 0.5s;
+		}
+		.programsForGameListItemBLockSubArSpan {
+			color: $black-color;
+			transition: all 0.5s;
+		}
+	}
+}
+
+.programsForGameListItemBLock {
+	background-color: $bgColor-block;
+	margin-top: -7px;
+	width: 310px;
+	height: 180px;
+	padding: 25px 24px 33px 19px;
+	border-bottom-left-radius: $border-radius-card;
+	border-bottom-right-radius: $border-radius-card;
+}
+
+.programsForGameListItemTitle {
+	font-size: 24px;
+	margin-bottom: 70px;
+}
+
+.programsForGameListItemBLockGroup {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 20px;
+}
+
+.programsForGameListItemBLockSub {
+	@include subtitle;
+	margin: 0;
+}
+
+.programsForGameListItemBLockSubAr {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	transition: all 0.7s;
+}
+.programsForGameListItemBLockSubArSpan {
+	color: $base-color;
+	font-size: 30px;
+	transition: all 0.7s;
+}

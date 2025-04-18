@@ -1,0 +1,165 @@
+@import './App.module.scss';
+
+.voice {
+	padding: $padding;
+}
+
+.voiceTitle {
+	@include titleSection;
+	margin-bottom: $margin-bottom;
+}
+
+.voiceSub {
+	@include subtitle;
+	color: $base-color;
+	margin-bottom: 72px;
+}
+
+.voiceItems {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 20px;
+}
+
+.voiceTs,
+.voiceMumble {
+	position: relative;
+	width: 490px;
+	height: 590px;
+	padding: 38px;
+	border-radius: $border-radius;
+}
+
+.voiceTs {
+	background-color: $bgColor-block;
+
+	&:hover {
+		.voiceTsImg {
+			transform: scale(1.08);
+			transition: all 0.8s;
+		}
+		.voiceLink {
+			color: #000;
+			background-color: $base-color;
+			transition: all 0.6s;
+		}
+		.voiceArrow {
+			color: #000;
+			transition: all 0.6s;
+		}
+	}
+}
+
+.voiceMumble {
+	background-color: $bgColor-btn;
+
+	&:hover {
+		.voiceMumbleImg {
+			transform: scale(1.08);
+			transition: all 0.8s;
+		}
+		.voiceLink {
+			color: #000;
+			background-color: $base-color;
+			transition: all 0.6s;
+		}
+		.voiceArrow {
+			color: #000;
+			transition: all 0.6s;
+		}
+	}
+}
+
+.voiceTsTitle,
+.voiceMumbleTitle {
+	font-size: $calcFont;
+	font-weight: 800;
+	line-height: 115%; /* 43.7px */
+	letter-spacing: -0.38px;
+}
+
+.voiceTsImg {
+	position: absolute;
+	top: 221px;
+	right: 85px;
+	transition: all 0.8s;
+}
+
+.voiceMumbleImg {
+	position: absolute;
+	top: 221px;
+	right: 94px;
+	transition: all 0.8s;
+}
+
+.voiceLink {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	bottom: 38px;
+	padding: 0px 5px;
+	border-radius: $border-radius-card;
+	transition: all 0.6s;
+}
+
+.voiceArrow {
+	font-size: 25px;
+	margin-left: 14px;
+	transition: all 0.6s;
+}
+
+.voiceSearchPlayer,
+.helpsContainer {
+	@include sectionStyle;
+	background: #232229;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	z-index: 20;
+
+	&:hover {
+		.voiceSearchPlayerImg {
+			transform: scale(1.08);
+			transition: all 0.9s;
+		}
+		.voiceSearchPlayerLink {
+			color: #000;
+			background-color: $base-color;
+			transition: all 0.6s;
+		}
+		.voiceArrow {
+			color: #000;
+			transition: all 0.6s;
+		}
+	}
+}
+
+.voiceSearchPlayerBLock {
+	position: absolute;
+	top: 80px;
+	left: 38px;
+}
+
+.voiceSearchPlayerTitle {
+	font-size: $calcFont;
+	font-weight: 800;
+	line-height: 115%; /* 43.7px */
+	letter-spacing: -0.38px;
+  margin-bottom: $margin-bottom;
+}
+.voiceSearchPlayerSub {
+	margin-bottom: 221px;
+}
+
+.voiceSearchPlayerImg {
+	position: absolute;
+	right: 0;
+	z-index: -1;
+	transition: all 0.8s;
+}
+
+.voiceSearchPlayerLink {
+	display: inline-flex;
+	align-items: center;
+	border-radius: $border-radius;
+	padding: 2px 5px;
+}

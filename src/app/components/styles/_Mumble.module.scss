@@ -1,0 +1,13 @@
+@import './App.module.scss';
+
+.mumbleTop{
+  padding: 160px 0;
+}
+
+.mumbleTopInner{
+  text-align: center;
+}
+
+.mumbleContent{
+  padding: $padding;
+}

@@ -1,0 +1,37 @@
+@import './App.module.scss';
+
+.rules {
+	padding: 180px 0 125px;
+}
+
+.rulesInnerContent {
+	padding: 40px 0 80px;
+}
+
+.rulesInnerTitle {
+	@include titleSection;
+	width: 600px;
+	margin: 0 auto;
+	margin-bottom: $margin-bottom;
+}
+
+.rulesInnerSub {
+	@include subtitle;
+	color: $base-color;
+}
+
+.rulesInnerContentWrapperTitle {
+	@include titleSection;
+	text-align: left;
+  margin-bottom: 20px;
+}
+
+.rulesInnerContentWrapperSub {
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 110%; /* 17.6px */
+	letter-spacing: -0.16px;
+  text-align: left;
+  margin-bottom: 80px;
+}
