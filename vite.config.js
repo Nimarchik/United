@@ -11,5 +11,6 @@ export default defineConfig({
 			},
 		},
 	},
+	base: '/uniteProject/',
 	plugins: [react()],
 })
