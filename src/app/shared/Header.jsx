@@ -21,8 +21,11 @@ const Header = () => {
 
 	const changeLanguage = (lang) => {
 		i18n.changeLanguage(lang);
-		navigate(`${lang}${window.location.pathname.slice(3)}`)
+		// navigate(`${lang}${window.location.pathname.slice(3)}`)
 		setValue(lang)
+		const path = window.location.pathname.slice(3);  // Убираем старый язык из пути
+		navigate(`/${lang}${path}`);
+		
 	};
 
 	useEffect(() => {
