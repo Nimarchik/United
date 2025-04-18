@@ -22,9 +22,9 @@ function App() {
 		},
 	})
 
-	// useEffect(() => {
-	// 	window.scroll(0, 0)
-	// })
+	useEffect(() => {
+		window.scroll(0, 0)
+	})
 
 	return (
 		<>
