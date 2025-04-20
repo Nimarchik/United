@@ -1,12 +1,12 @@
 import { v4 as uuidv4 } from 'uuid'
 
-const BASE_PATH = '/United/GamesForAndroid'
+const BASE_PATH = '/United';
 
 export const GamesForAndroid = [
 	{
 		id: uuidv4(),
-		img: `${BASE_PATH}/Pictures/mine.png`,
-		imgCard: `${BASE_PATH}/PicturesCard/maine.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/mine.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/maine.png`,
 		subGenre: 'Open World, Sandbox',
 		title: 'Minecraft: PE',
 		downloadLink: 'https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=ru',
@@ -20,8 +20,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${BASE_PATH}/Pictures/samp.png`,
-		imgCard: `${BASE_PATH}/PicturesCard/samp.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/samp.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/samp.png`,
 		subGenre: 'RP, Simulation, Action',
 		title: 'SAMP Mobile',
 		downloadLink: 'https://samp-mobile.com/samp-mobile.apk',
@@ -35,8 +35,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${BASE_PATH}/Pictures/los.png`,
-		imgCard: `${BASE_PATH}/PicturesCard/los.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/los.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/los.png`,
 		subGenre: 'Action, Racing, Open World',
 		title: 'Los Angeles Crime',
 		downloadLink: 'https://play.google.com/store/apps/details?id=com.MA.LAC',
@@ -50,8 +50,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${BASE_PATH}/Pictures/sf.png`,
-		imgCard: `${BASE_PATH}/PicturesCard/sf.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/sf.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/sf.png`,
 		subGenre: 'Shooters, Action',
 		title: 'Special Forces Group 2',
 		downloadLink: 'https://play.google.com/store/apps/details?id=com.ForgeGames.SpecialForcesGroup2&hl=uk',
@@ -65,8 +65,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${BASE_PATH}/Pictures/nomb.png`,
-		imgCard: `${BASE_PATH}/PicturesCard/bomb.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/nomb.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/bomb.png`,
 		subGenre: 'Casual',
 		title: 'Bomb Squad',
 		downloadLink: 'https://play.google.com/store/apps/details?id=net.froemling.bombsquad',
@@ -80,8 +80,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${BASE_PATH}/Pictures/polifyeld.png`,
-		imgCard: `${BASE_PATH}/PicturesCard/polyfield.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/polifyeld.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/polyfield.png`,
 		subGenre: 'Shooters, Action',
 		title: 'Polifyeld',
 		downloadLink: 'https://play.google.com/store/apps/details?id=com.MA.Polyfield&hl=uk',
