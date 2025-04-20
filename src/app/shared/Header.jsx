@@ -30,15 +30,14 @@ const Header = () => {
 
 	useEffect(() => {
 		localStorage.setItem('value', value)
-		
 	}, [value])
 
 	useEffect(() => {
 		// Устанавливаем язык при инициализации
-		if (language !== i18n.language) {
-			i18n.changeLanguage(language);
+		if (value !== i18n.language) {
+			i18n.changeLanguage(value);
 		}
-	}, [language, i18n]);
+	}, [value, i18n]);
 
 
 	return (

@@ -1,6 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { RouterProvider, createBrowserRouter, createHashRouter } from 'react-router-dom'
 import App from './App.jsx'
 import Home from './app/pages/Home.jsx'
 import Error from './app/shared/Error.jsx'
@@ -40,7 +40,7 @@ const searchID = servicesGamesCards.map(index => index)
 const searchIDOnlineGame = OnlineGamesBD.map(index => index)
 const searchIDNews = NewsBD.map(index => index)
 
-const router = createBrowserRouter([
+const router = createHashRouter([
 	{
 		path: '/',
 		element: <App />,
@@ -159,11 +159,15 @@ const router = createBrowserRouter([
 				element: <BuyGames />
 			}
 		],
-	},
-])
+
+	}],
+	{
+		basename: '/United',
+	})
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
-		<RouterProvider router={router} basename="/United" />
+		<RouterProvider router={router} />
 	</StrictMode>
 )
+// basename = "/United"

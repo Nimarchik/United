@@ -8,17 +8,18 @@ i18n
 	.use(I18nextBrowserLanguageDetector)
 	.use(initReactI18next)
 	.init({
-		lng: 'uk', 
-		fallbackLng: 'uk', 
+		lng: 'uk',
+		fallbackLng: 'uk',
 		debug: false,
 		backend: {
-			loadPath: '/locales/{{lng}}/translate.json', 
+			loadPath: `${import.meta.env.BASE_URL}locales/{{lng}}/translate.json`,
+
 		},
 		interpolation: {
 			escapeValue: false,
 		},
 		react: {
-			useSuspense: false, 
+			useSuspense: false,
 		},
 	});
 
