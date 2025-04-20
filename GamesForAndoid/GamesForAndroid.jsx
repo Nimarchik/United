@@ -3,8 +3,8 @@ import { v4 as uuidv4 } from 'uuid';
 export const GamesForAndroid = [
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/mine.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/maine.png`,
+		img: `/GamesForAndoid/Pictures/mine.png`,
+		imgCard: `/GamesForAndoid/PicturesCard/maine.png`,
 		subGenre: 'Open World, Sandbox',
 		title: 'Minecraft: PE',
 		downloadLink:
@@ -19,8 +19,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/samp.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/samp.png`,
+		img: '/GamesForAndoid/Pictures/samp.png',
+		imgCard: '/GamesForAndoid/PicturesCard/samp.png',
 		subGenre: 'RP, Simulation, Action',
 		title: 'SAMP Mobile',
 		downloadLink: 'https://samp-mobile.com/samp-mobile.apk',
@@ -35,8 +35,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/los.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/los.png`,
+		img: '/GamesForAndoid/Pictures/los.png',
+		imgCard: '/GamesForAndoid/PicturesCard/los.png',
 		subGenre: 'Action, Racing, Open World',
 		title: 'Los Angeles Crime',
 		downloadLink: 'https://play.google.com/store/apps/details?id=com.MA.LAC',
@@ -51,8 +51,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/sf.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/sf.png`,
+		img: '/GamesForAndoid/Pictures/sf.png',
+		imgCard: '/GamesForAndoid/PicturesCard/sf.png',
 		subGenre: 'Shooters, Action',
 		title: 'Special Forces Group 2',
 		downloadLink:
@@ -68,8 +68,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/nomb.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/bomb.png`,
+		img: '/GamesForAndoid/Pictures/nomb.png',
+		imgCard: '/GamesForAndoid/PicturesCard/bomb.png',
 		subGenre: 'Casual',
 		title: 'Bomb Squad',
 		downloadLink:
@@ -84,8 +84,8 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/polifyeld.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/polyfield.png`,
+		img: '/GamesForAndoid/Pictures/polifyeld.png',
+		imgCard: '/GamesForAndoid/PicturesCard/polyfield.png',
 		subGenre: 'Shooters, Action',
 		title: 'Polifyeld',
 		downloadLink:
