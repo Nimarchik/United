@@ -1,15 +1,17 @@
 import { v4 as uuidv4 } from 'uuid'
 
+const BASE_PATH = `/United`;
+
 export const ProcatBD = [
 	{
 		id: uuidv4(),
-		title: 'titleProcat',
-		gpsName: 'gpsProcatName',
-		telName: 'telProcatName',
-		todoName: 'todoProcatName',
-		gpsLogo: '/public/ParnersProduct/logo/gps.png',
-		telLogo: '/public/ParnersProduct/logo/tel.png',
-		todoLogo: '/public/ParnersProduct/logo/todo.png',
-		logo: '/public/ParnersProduct/logo/procatLogo.png',
+		title: `titleProcat`,
+		gpsName: `gpsProcatName`,
+		telName: `telProcatName`,
+		todoName: `todoProcatName`,
+		gpsLogo: `${BASE_PATH}/ParnersProduct/logo/gps.png`,
+		telLogo: `${BASE_PATH}/ParnersProduct/logo/tel.png`,
+		todoLogo: `${BASE_PATH}/ParnersProduct/logo/todo.png`,
+		logo: `${BASE_PATH}/ParnersProduct/logo/procatLogo.png`,
 	},
 ]

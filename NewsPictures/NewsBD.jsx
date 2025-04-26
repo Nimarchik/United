@@ -1,10 +1,12 @@
 import { v4 as uuidv4 } from 'uuid'
 
+const BASE_PATH = '/United';
+
 export const NewsBD = [
 	{
 		id: uuidv4(),
-		img: '/ServicesGames/Pictures/mine.jpg',
-		imgCard: '/NewsPictures/PicturesCard/minecraft.jpg',
+		img: `${BASE_PATH}/ServicesGames/Pictures/mine.jpg`,
+		imgCard: `${BASE_PATH}/NewsPictures/PicturesCard/minecraft.jpg`,
 		subGenre: 'newsInnerListSubM',
 		data: 'newsInnerListFooterTime',
 		title: 'newsInnerListTitleM',
