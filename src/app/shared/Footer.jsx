@@ -203,7 +203,7 @@ const Footer = () => {
 						<img src={logo} alt='' />
 						<ul className={styles.footerInfoListW}>
 							<li className={styles.footerInfoListItem}>
-								<Link>
+								<Link to={`https://www.tiktok.com/@unite_gaming`}>
 									<svg
 										className={styles.tiktok}
 										xmlns='http://www.w3.org/2000/svg'
@@ -266,7 +266,7 @@ const Footer = () => {
 								</Link>
 							</li>
 							<li className={styles.footerInfoListItem}>
-								<Link>
+								<Link to={`https://icq.im/UniteGaming`}>
 									{' '}
 									<svg
 										className={styles.footerInq}
@@ -324,7 +324,7 @@ const Footer = () => {
 
 						<ul className={styles.footerInfoList}>
 							<li className={styles.footerInfoListItem}>
-								<Link>
+								<Link to={`https://www.tiktok.com/@unite_gaming`}>
 									<svg
 										className={styles.tiktok}
 										xmlns='http://www.w3.org/2000/svg'
@@ -387,7 +387,7 @@ const Footer = () => {
 								</Link>
 							</li>
 							<li className={styles.footerInfoListItem}>
-								<Link>
+								<Link to={`https://icq.im/UniteGaming`}>
 									{' '}
 									<svg
 										className={styles.footerInq}

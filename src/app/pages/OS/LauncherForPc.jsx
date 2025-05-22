@@ -49,7 +49,7 @@ import YourComponentWithFlickity from '../../shared/YourComponentWithFlickity'
 
 const LauncherForPc = () => {
 	// const flickityOptins = {
-	// 	initialIndex: 0,
+	// 	initialIndex: 1,
 	// }
 
 	return (

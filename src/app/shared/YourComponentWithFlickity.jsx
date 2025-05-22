@@ -7,7 +7,8 @@ import { Link, useParams } from 'react-router-dom'
 
 const YourComponentWithFlickity = ({ partners }) => {
 
-	const { l: lang } = useParams()
+	const value = localStorage.getItem('value') || 'uk'
+
 
 	const flickityRef = useRef(null)
 
@@ -20,7 +21,8 @@ const YourComponentWithFlickity = ({ partners }) => {
 				cellAlign: 'left',
 				contain: true,
 				pageDots: true,
-				wrapAround: false, // Опция для бесконечной прокрутки
+				wrapAround: false,
+				initialIndex: -1, // Опция для бесконечной прокрутки
 			})
 		}
 
@@ -36,7 +38,7 @@ const YourComponentWithFlickity = ({ partners }) => {
 		<div className={styles.sliderContainer} ref={flickityRef}>
 			{partners.map(items => (
 				<Link
-					to={`/game-preview/${items.id}`}
+					to={`/${value}/game-preview/${items.id}`}
 					id={items.id}
 					key={items.id}
 					state={{ items }}

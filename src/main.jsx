@@ -75,7 +75,7 @@ const router = createHashRouter([
 				element: <SecvicesGames index={searchID} />,
 			},
 			{
-				path: `/game-preview/:id`,
+				path: `:lang/game-preview/:id`,
 				element: <ServicesGamePreview />,
 			},
 			{
@@ -99,7 +99,7 @@ const router = createHashRouter([
 				element: <News index={searchIDNews} />,
 			},
 			{
-				path: `/NewsPreview/:id`,
+				path: `:lang/NewsPreview/:id`,
 				element: <NewsPreview />,
 			},
 			{
@@ -147,7 +147,7 @@ const router = createHashRouter([
 				element: <SinglGames />
 			},
 			{
-				path: `/singl-game-preview/:id`,
+				path: `:lang/singl-game-preview/:id`,
 				element: <SinglGamePreview />
 			},
 			{

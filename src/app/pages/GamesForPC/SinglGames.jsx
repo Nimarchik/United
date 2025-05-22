@@ -31,7 +31,7 @@ const SinglGames = () => {
 								{useLangChange('singlGamesInnerSub')}
 							</p>
 
-							<SinglGamePreviewCard props={SinglGamesBD} lang={value} />
+							<SinglGamePreviewCard props={SinglGamesBD} value={value} />
 						</div>
 					</div>
 				</section>

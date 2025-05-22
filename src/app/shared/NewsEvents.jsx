@@ -20,7 +20,7 @@ const NewsEvents = () => {
 							{NewsBD.map((items, index) => (
 								<li className={styles.newsInnerListItem} key={index}>
 									<Link
-										to={`/NewsPreview/${items.id}`}
+										to={`/${value}/NewsPreview/${items.id}`}
 										id={items.id}
 										key={items.id}
 										state={{ items }}

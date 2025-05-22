@@ -1,5 +1,11 @@
 @import "./App.module.scss";
 
+@media screen and (min-width: 1440px) {
+  .footerInfoListW {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .sectionOurProduct {
     padding: 80px 0 10px;
@@ -313,8 +319,9 @@
   .otherServicesInnerSteam,
   .partnersInner,
   .keySteamInner {
-    width: 100%;
+    width: 335px;
     height: 381px;
+    margin: 0 auto;
   }
 
   .voiceSearchPlayer,
@@ -1112,6 +1119,7 @@
     position: absolute;
     top: 309px;
     margin: 0;
+    margin-right: 45px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -1165,7 +1173,7 @@
   .keySteamImg {
     position: absolute;
     top: 212px;
-    left: 10px;
+    left: 0;
   }
 
   .TeamSpeakTopBtnBlock {
@@ -1355,8 +1363,11 @@
   .comunityInnerBlocksPrav,
   .comunityInnerBlocksUniteChannel,
   .comunityInnerBlocksChats,
-  .privacyContentBlock {
+  .privacyContentBlock,
+  .bigColectionsContent {
+    width: 335px;
     height: 598px;
+    margin: 20px auto 0;
   }
 
   .HowItWorkImg {
@@ -1686,8 +1697,8 @@
 
   .donateContentInnerLinkImg {
     position: absolute;
-    top: 295px;
-    right: 77px;
+    top: 310px;
+    right: 85px;
     width: 180px;
     height: 278px;
   }
@@ -2090,5 +2101,18 @@
 
   .privacyContentInner {
     padding: 40px 20px 80px;
+  }
+
+  .newsPrewiewInner {
+    padding: 40px 20px;
+
+  }
+
+  .newsPrewiewInnerTitle {
+    text-align: left;
+  }
+
+  .voiceItems {
+    align-items: center;
   }
 }

@@ -24,7 +24,7 @@ const OnlineGames = () => {
 							{useLangChange('olineGameInnerSub')}
 						</p>
 						
-            <PreviewCards props={OnlineGamesBD} />
+            <PreviewCards props={OnlineGamesBD} lang={value} />
 					</div>
 				</section>
 
