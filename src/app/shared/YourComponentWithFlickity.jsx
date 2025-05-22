@@ -3,9 +3,12 @@ import styles from '../components/styles/App.module.css'
 import React, { useEffect, useRef } from 'react'
 import Flickity from 'flickity'
 import './../components/styles/_Flickyti.scss'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 const YourComponentWithFlickity = ({ partners }) => {
+
+	const { l: lang } = useParams()
+
 	const flickityRef = useRef(null)
 
 	let flkty // Объявляем экземпляр Flickity снаружи useEffect
@@ -33,7 +36,7 @@ const YourComponentWithFlickity = ({ partners }) => {
 		<div className={styles.sliderContainer} ref={flickityRef}>
 			{partners.map(items => (
 				<Link
-					to={`/:l/game-preview/:${items.id}`}
+					to={`/game-preview/${items.id}`}
 					id={items.id}
 					key={items.id}
 					state={{ items }}

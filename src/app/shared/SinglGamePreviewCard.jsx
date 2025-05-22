@@ -1,15 +1,16 @@
 
 import styles from '../components/styles/App.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 
 
-export const SinglGamePreviewCard = ({ props }) => {
+export const SinglGamePreviewCard = ({ props, lang }) => {
+
   return (
     <>
       <div className={styles.servicesGamesListGame}>
         {props.map(items => (
           <Link
-            to={`/:l/singl-game-preview/:${items.id}`}
+            to={`/singl-game-preview/${items.id}`}
             id={items.id}
             key={items.id}
             state={{ items }}

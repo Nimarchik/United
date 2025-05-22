@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import useLangChange from '../pages/LangChange'
 import styles from '../components/styles/App.module.css'
 
@@ -8,6 +8,9 @@ import mumble from '../components/assets/Mumble/mumble.png'
 import stoune from '../components/assets/VoiceChat/stoune.png'
 
 const VoiceChat = () => {
+	const value = localStorage.getItem('value') || 'uk'
+
+
   return (
 		<>
 			<section className={styles.voice}>
@@ -15,7 +18,7 @@ const VoiceChat = () => {
 					<h1 className={styles.voiceTitle}>{useLangChange('voiceTitle')}</h1>
 					<p className={styles.voiceSub}>{useLangChange('voiceSub')}</p>
 					<div className={styles.voiceItems}>
-						<Link to={`/:l/teamspeak`} className={styles.voiceTs}>
+						<Link to={`/${value}/teamspeak`} className={styles.voiceTs}>
 							<h1 className={styles.voiceTsTitle}>Teamspeak</h1>
 							<img className={styles.voiceTsImg} src={teamSpeack} alt='' />
 							<p className={styles.voiceLink}>
@@ -23,7 +26,7 @@ const VoiceChat = () => {
 								<span className={styles.voiceArrow}>{'>'}</span>
 							</p>
 						</Link>
-						<Link to={`/:l/mumble`} className={styles.voiceMumble}>
+						<Link to={`/${value}/mumble`} className={styles.voiceMumble}>
 							<h1 className={styles.voiceMumbleTitle}>Mumble</h1>
 							<img className={styles.voiceMumbleImg} src={mumble} alt='' />
 							<p className={styles.voiceLink}>

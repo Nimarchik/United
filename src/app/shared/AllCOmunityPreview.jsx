@@ -1,14 +1,19 @@
 import styles from '../components/styles/App.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import useLangChange from '../pages/LangChange'
 
+
+
 export const AllCOmunityPreview = ({ props }) => {
+	const value = localStorage.getItem('value') || 'uk'
+
+
 	return (
 		<>
 			<div className={styles.servicesGamesListGame}>
 				{props.map(items => (
 					<Link
-						to={`/:l/Error`}
+						to={`/${value}/Error`}
 						id={items.id}
 						key={items.id}
 						state={{ items }}

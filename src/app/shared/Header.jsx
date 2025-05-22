@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import styles from '../components/styles/App.module.css'
 import logo from '../components/assets/logo.svg'
 import { useTranslation } from "react-i18next";
@@ -9,35 +9,40 @@ import useLangChange from "../pages/LangChange";
 
 
 const Header = () => {
-	const [hover, setHover] = useState(false)
-
-	const [value, setValue] = useState(
-		() => localStorage.getItem('value') || 'en'
-	)
-
 	const { i18n } = useTranslation();
-
 	const navigate = useNavigate();
+	const { l: lang } = useParams();
 
-	const changeLanguage = (lang) => {
-		i18n.changeLanguage(lang);
-		// navigate(`${lang}${window.location.pathname.slice(3)}`)
-		setValue(lang)
-		const path = window.location.pathname.slice(3);  // Убираем старый язык из пути
-		navigate(`/${lang}${path}`);
-		
+	const [hover, setHover] = useState(false);
+	const [value, setValue] = useState(() => localStorage.getItem('value') || 'uk');
+
+	useEffect(() => {
+		const supportedLangs = ['uk', 'en'];
+		if (lang && supportedLangs.includes(lang)) {
+			if (i18n.language !== lang) {
+				i18n.changeLanguage(lang);
+			}
+			setValue(lang);
+			localStorage.setItem('value', lang);
+		}
+	}, [lang, i18n]);
+
+	const changeLanguage = (newLang) => {
+		setValue(newLang);
+		localStorage.setItem('value', newLang);
+
+		const path = window.location.hash.replace(/^#/, '');
+		const pathParts = path.split('/').filter(Boolean);
+
+		if (pathParts.length > 0) {
+			pathParts[0] = newLang;
+		} else {
+			pathParts.push(newLang);
+		}
+
+		navigate(`/${pathParts.join('/')}`);
 	};
 
-	useEffect(() => {
-		localStorage.setItem('value', value)
-	}, [value])
-
-	useEffect(() => {
-		// Устанавливаем язык при инициализации
-		if (value !== i18n.language) {
-			i18n.changeLanguage(value);
-		}
-	}, [value, i18n]);
 
 
 	return (
@@ -65,32 +70,32 @@ const Header = () => {
 											{useLangChange('navListLink')}
 											<ul className={styles.navListItemList}>
 												<li className={styles.navListItemListItem}>
-													<Link to={`/:l/launchPcId`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/launchPcId`} onClick={() => setHover(!hover)}>
 														{useLangChange('navListItemListItemPc')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem}>
-													<Link to={`/:l/launchAndroid`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/launchAndroid`} onClick={() => setHover(!hover)}>
 														{useLangChange('navListItemListItemAnd')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem}>
-													<Link to={`/:l/teamspeak`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/teamspeak`} onClick={() => setHover(!hover)}>
 														{useLangChange('TeamSpeakTopTitle')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem}>
-													<Link to={`/:l/mumble`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/mumble`} onClick={() => setHover(!hover)}>
 														{useLangChange('navListItemListItemMum')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem}>
-													<Link to={`/:l/buygames`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/buygames`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkBuy')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem}>
-													<Link to={`/:l/keySteam`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/keySteam`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkKey')} Steam
 													</Link>
 												</li>
@@ -102,27 +107,27 @@ const Header = () => {
 											{useLangChange('navListLink1')}
 											<ul className={styles.navListItemList1}>
 												<li className={styles.navListItemListItem1}>
-													<Link to={`/:l/services-game`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/services-game`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkSer')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem1}>
-													<Link to={`/:l/OnlineGame`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/OnlineGame`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkSet')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem1}>
-													<Link to={`/:l/SinglGames`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/SinglGames`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkSingl')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem1}>
-													<Link to={`/:l/ProgramForGame`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/ProgramForGame`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkProg')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem1}>
-													<Link to={`/:l/GamesForAndroid`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/GamesForAndroid`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkGameAnd')}
 													</Link>
 												</li>
@@ -131,7 +136,7 @@ const Header = () => {
 										</div>
 									</li>
 									<li className={styles.navListItem}>
-										<Link to={`/:l/donate`} className={styles.navListLink2} onClick={() => setHover(!hover)}>
+										<Link to={`/${value}/donate`} className={styles.navListLink2} onClick={() => setHover(!hover)}>
 											{useLangChange('navListLink2')}
 										</Link>
 									</li>
@@ -141,32 +146,32 @@ const Header = () => {
 
 											<ul className={styles.navListItemList3}>
 												<li className={styles.navListItemListItem3}>
-													<Link to={`/:l/about`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/about`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkAbo')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem3}>
-													<Link to={`/:l/TeamsUnite`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/TeamsUnite`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkTeam')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem3}>
-													<Link to={`/:l/about#culture`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/about#culture`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkCul')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem3}>
-													<Link to={`/:l/Parters`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/Parters`} onClick={() => setHover(!hover)}>
 														{useLangChange('navListLink4')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem3}>
-													<Link to={`/:l/Career`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/Career`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkKar')}
 													</Link>
 												</li>
 												<li className={styles.navListItemListItem3}>
-													<Link to={`/:l/Resource`} onClick={() => setHover(!hover)}>
+													<Link to={`/${value}/Resource`} onClick={() => setHover(!hover)}>
 														{useLangChange('footerInnerItemLinkRes')}
 													</Link>
 												</li>
@@ -175,7 +180,7 @@ const Header = () => {
 									</li>
 									<li className={styles.navListItem}>
 										<Link
-											to={`/:l/Parters`}
+											to={`/${value}/Parters`}
 											className={styles.navListLink4} onClick={() => setHover(!hover)}
 										>
 											{useLangChange('navListLink4')}
@@ -183,14 +188,14 @@ const Header = () => {
 									</li>
 									<li className={styles.navListItem}>
 										<Link
-											to={`/:l/ComunityUniteICQ`}
+											to={`/${value}/ComunityUniteICQ`}
 											className={styles.navListLink5} onClick={() => setHover(!hover)}
 										>
 											{useLangChange('navListLink5')}
 										</Link>
 									</li>
 									<li className={styles.navListItem}>
-										<Link to={`/:l/Contacts`} className={styles.navListLink6} onClick={() => setHover(!hover)}>
+										<Link to={`/${value}/Contacts`} className={styles.navListLink6} onClick={() => setHover(!hover)}>
 											{useLangChange('navListLink6')}
 										</Link>
 									</li>

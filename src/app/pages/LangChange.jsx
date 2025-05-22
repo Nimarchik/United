@@ -7,12 +7,14 @@ function useLangChange(props) {
 	const { t, i18n } = useTranslation()
 
 	useEffect(() => {
-		i18n.changeLanguage(lang)
+		// Зміна мови при зміні параметра 'lang' в URL
+		if (lang) {
+			i18n.changeLanguage(lang)
+		}
 	}, [lang, i18n])
 
-  let langChange = t(`${props}`)
-
-	return langChange
+	// Повернення перекладу для переданого ключа
+	return t(props)
 }
 
 export default useLangChange

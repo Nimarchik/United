@@ -1,5 +1,5 @@
 import styles from '../components/styles/App.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import StartGame from './UI/StartGame'
 import NewsEvents from '../shared/NewsEvents'
 
@@ -42,6 +42,9 @@ import imgRight99 from '../components/assets/LauncherForPc/imgRight9.png'
 import useLangChange from './LangChange'
 
 const Home = () => {
+	const value = localStorage.getItem('value') || 'uk'
+
+
 	return (
 		<>
 			<main className={styles.main}>
@@ -65,7 +68,7 @@ const Home = () => {
 									</p>
 									<ul className={styles.innerContentList}>
 										<li className={styles.innerContentItem}>
-											<Link to={`/:l/launchPcId`}>
+											<Link to={`/${value}/launchPcId`}>
 												<svg
 													className={styles.windows}
 													xmlns='http://www.w3.org/2000/svg'
@@ -94,7 +97,7 @@ const Home = () => {
 											</Link>
 										</li>
 										<li className={styles.innerContentItem}>
-											<Link to={`/:l/launchAndroid`}>
+											<Link to={`/${value}/launchAndroid`}>
 												<svg
 													className={styles.android}
 													xmlns='http://www.w3.org/2000/svg'
@@ -214,7 +217,7 @@ const Home = () => {
 										</p>
 									</div>
 								</Link>
-								<Link to={`/:l/launchAndroid`}>
+								<Link to={`/${value}/launchAndroid`}>
 									<div className={styles.innerDownoladBlock2}>
 										<h4 className={styles.blocksTitle2}>
 											{useLangChange('blocksTitle2')}
@@ -228,7 +231,7 @@ const Home = () => {
 								</Link>
 							</div>
 							<div className={styles.innerServicesGame}>
-								<Link to={`/:l/services-game`}>
+								<Link to={`/${value}/services-game`}>
 									<div className={styles.groupContentServices}>
 										<div className={styles.servBlockTitle}>
 											<h4 className={styles.servTitle}>
@@ -259,7 +262,7 @@ const Home = () => {
 
 				<section className={styles.popularGame}>
 					<div className={styles.container}>
-						<Link to={`/:l/OnlineGame`}>
+						<Link to={`/${value}/OnlineGame`}>
 							<div className={styles.popularGameInner}>
 								<div className={styles.popularGameInnerContent}>
 									<h1 className={styles.popularGameInnerContentTitle}>
@@ -284,7 +287,7 @@ const Home = () => {
 
 				<section className={styles.getCommunity}>
 					<div className={styles.container}>
-						<Link to={`/:l/ComunityUniteICQ`}>
+						<Link to={`/${value}/ComunityUniteICQ`}>
 							<div className={styles.communityInner}>
 								<div className={styles.communityInnerContent}>
 									<h1 className={styles.communityInnerContentTitle}>
@@ -416,7 +419,7 @@ const Home = () => {
 						</p>
 
 						<div className={styles.otherServicesInner}>
-							<Link to={`/:l/buygames`} className={styles.otherServicesInnerSteam}>
+							<Link to={`/${value}/buygames`} className={styles.otherServicesInnerSteam}>
 								<div className={styles.otherSteamBlock}>
 									<h2 className={styles.otherSteamBlockTitle}>
 										Steam, Epic Games, Battle.net
@@ -447,7 +450,7 @@ const Home = () => {
 									{useLangChange('otherServicesLink')} {'>'}
 								</p>
 							</Link>
-							<Link to={`/:l/Parters`} className={styles.partnersInner}>
+							<Link to={`/${value}/Parters`} className={styles.partnersInner}>
 								<div className={styles.partners}>
 									<div className={styles.partnersBlockTitle}>
 										<h2 className={styles.partnersTitle}>
@@ -474,7 +477,7 @@ const Home = () => {
 									{useLangChange('partnersLink')} {'>'}
 								</p>
 							</Link>
-							<Link to={`/:l/keySteam`} className={styles.keySteamInner}>
+							<Link to={`/${value}/keySteam`} className={styles.keySteamInner}>
 								<div className={styles.keySteam}>
 									<div className={styles.keySteamBlockTitle}>
 										<h2 className={styles.keySteamTitle}>

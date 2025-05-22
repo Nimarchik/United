@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import styles from '../../components/styles/App.module.css'
 import useLangChange from '../LangChange'
 import { PreviewCards } from '../../shared/PreviewCards'
@@ -7,7 +7,11 @@ import Helps from '../../shared/Helps'
 import StartGame from '../UI/StartGame'
 import ServPicture from '../../components/assets/Home/groupGamePictures.png'
 
+
 const OnlineGames = () => {
+	const value = localStorage.getItem('value') || 'uk'
+
+	
 	return (
 		<>
 			<main className={styles.main}>
@@ -27,7 +31,7 @@ const OnlineGames = () => {
 				<section className={styles.communityGames}>
 					<div className={styles.container}>
 						<div className={styles.innerServicesGame}>
-							<Link to={`/:l/services-game`}>
+							<Link to={`/${value}/services-game`}>
 								<div className={styles.groupContentServices}>
 									<div className={styles.servBlockTitle}>
 										<h4 className={styles.servTitle}>

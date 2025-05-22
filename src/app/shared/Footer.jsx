@@ -1,9 +1,11 @@
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import styles from '../components/styles/App.module.css'
 import logo from '../components/assets/logo.svg'
 import useLangChange from '../pages/LangChange'
 
 const Footer = () => {
+	const value = localStorage.getItem('value') || 'uk'
+
 	return (
 		<>
 			<footer className={styles.footer}>
@@ -16,7 +18,7 @@ const Footer = () => {
 							<ul className={styles.footerInnerList}>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/Parters`}
+										to={`/${value}/Parters`}
 										className={styles.footerInnerItemLinkPart}
 									>
 										{useLangChange('footerInnerItemLinkPart')}
@@ -24,7 +26,7 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={'/:l/donate'}
+										to={`/${value}/donate`}
 										className={styles.footerInnerItemLinkDon}
 									>
 										{useLangChange('footerInnerItemLinkDon')}
@@ -32,7 +34,7 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/ComunityUniteICQ`}
+										to={`/${value}/ComunityUniteICQ`}
 										className={styles.footerInnerItemLinkCom}
 									>
 										{useLangChange('footerInnerItemLinkCom')}
@@ -40,7 +42,7 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/Contacts`}
+										to={`/${value}/Contacts`}
 										className={styles.footerInnerItemLinkHelp}
 									>
 										{useLangChange('footerInnerItemLinkHelp')}
@@ -48,7 +50,7 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/Resource`}
+										to={`/${value}/Resource`}
 										className={styles.footerInnerItemLinkRes}
 									>
 										{useLangChange('footerInnerItemLinkRes')}
@@ -63,7 +65,7 @@ const Footer = () => {
 							<ul className={styles.footerInnerList}>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/launchPcId`}
+										to={`/${value}/launchPcId`}
 										className={styles.footerInnerItemLinkLau}
 									>
 										Launcher {useLangChange('footerInnerItemLinkLau')} PC
@@ -71,7 +73,7 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/launchAndroid`}
+										to={`/${value}/launchAndroid`}
 										className={styles.footerInnerItemLinkLauAnd}
 									>
 										Launcher {useLangChange('footerInnerItemLinkLau')} Android
@@ -79,7 +81,7 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/teamspeak`}
+										to={`/${value}/teamspeak`}
 										className={styles.footerInnerItemLinkTS}
 									>
 										TeamSpeak {useLangChange('footerInnerItemLinkLau')} PC
@@ -87,20 +89,20 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={'/:l/mumble'}
+										to={`/${value}/mumble`}
 										className={styles.footerInnerItemLinkMum}
 									>
 										Mumble {useLangChange('footerInnerItemLinkLau')} Android
 									</Link>
 								</li>
 								<li className={styles.footerInnerListItem}>
-									<Link to={`/:l/buygames`} className={styles.footerInnerItemLinkBuy}>
+									<Link to={`/${value}/buygames`} className={styles.footerInnerItemLinkBuy}>
 										{useLangChange('footerInnerItemLinkBuy')}
 									</Link>
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/keySteam`}
+										to={`/${value}/keySteam`}
 										className={styles.footerInnerItemLinkKey}
 									>
 										{useLangChange('footerInnerItemLinkKey')} - Steam
@@ -115,7 +117,7 @@ const Footer = () => {
 							<ul className={styles.footerInnerList}>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/services-game`}
+										to={`/${value}/services-game`}
 										className={styles.footerInnerItemLinkSer}
 									>
 										{useLangChange('footerInnerItemLinkSer')}
@@ -123,20 +125,20 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/OnlineGame`}
+										to={`/${value}/OnlineGame`}
 										className={styles.footerInnerItemLinkSet}
 									>
 										{useLangChange('footerInnerItemLinkSet')}
 									</Link>
 								</li>
 								<li className={styles.footerInnerListItem}>
-									<Link to={`/:l/SinglGames`} className={styles.footerInnerItemLinkSingl}>
+									<Link to={`/${value}/SinglGames`} className={styles.footerInnerItemLinkSingl}>
 										{useLangChange('footerInnerItemLinkSingl')}
 									</Link>
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/ProgramForGame`}
+										to={`/${value}/ProgramForGame`}
 										className={styles.footerInnerItemLinkProg}
 									>
 										{useLangChange('footerInnerItemLinkProg')}
@@ -144,7 +146,7 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/GamesForAndroid`}
+										to={`/${value}/GamesForAndroid`}
 										className={styles.footerInnerItemLinkGameAnd}
 									>
 										{useLangChange('footerInnerItemLinkGameAnd')}
@@ -159,7 +161,7 @@ const Footer = () => {
 							<ul className={styles.footerInnerList}>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/about`}
+										to={`/${value}/about`}
 										className={styles.footerInnerItemLinkAbo}
 									>
 										{useLangChange('footerInnerItemLinkAbo')}
@@ -167,27 +169,27 @@ const Footer = () => {
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/TeamsUnite`}
+										to={`/${value}/TeamsUnite`}
 										className={styles.footerInnerItemLinkTeam}
 									>
 										{useLangChange('footerInnerItemLinkTeam')}
 									</Link>
 								</li>
 								<li className={styles.footerInnerListItem}>
-									<Link to={`/:l/about#culture`} className={styles.footerInnerItemLinkCul}>
+									<Link to={`/${value}/about#culture`} className={styles.footerInnerItemLinkCul}>
 										{useLangChange('footerInnerItemLinkCul')}
 									</Link>
 								</li>
 								<li className={styles.footerInnerListItem}>
 									<Link
-										to={`/:l/News`}
+										to={`/${value}/News`}
 										className={styles.footerInnerItemLinkNew}
 									>
 										{useLangChange('footerInnerItemLinkNew')}
 									</Link>
 								</li>
 								<li className={styles.footerInnerListItem}>
-									<Link to={`/:l/Career`} className={styles.footerInnerItemLinkKar}>
+									<Link to={`/${value}/Career`} className={styles.footerInnerItemLinkKar}>
 										{useLangChange('footerInnerItemLinkKar')}
 									</Link>
 								</li>
@@ -296,7 +298,7 @@ const Footer = () => {
 						<ul className={styles.footerInfoListContent}>
 							<li className={styles.footerInfoListItem}>
 								<Link
-									to={`/:l/Rules`}
+									to={`/${value}/Rules`}
 									className={styles.footerInfoListLinkRules}
 								>
 									{useLangChange('footerInfoListLinkRules')}
@@ -304,7 +306,7 @@ const Footer = () => {
 							</li>
 							<li className={styles.footerInfoListItem}>
 								<Link
-									to={`/:l/Privacy`}
+									to={`/${value}/Privacy`}
 									className={styles.footerInfoListLinkPol}
 								>
 									{useLangChange('footerInfoListLinkPol')}
@@ -312,7 +314,7 @@ const Footer = () => {
 							</li>
 							<li className={styles.footerInfoListItem}>
 								<Link
-									to={`/:l/Contacts`}
+									to={`/${value}/Contacts`}
 									className={styles.footerInfoListLinkCont}
 								>
 									{useLangChange('footerInfoListLinkCont')}

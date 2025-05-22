@@ -1,14 +1,16 @@
 import styles from '../components/styles/App.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import useLangChange from '../pages/LangChange'
 
 export const PreviewNews = ({ props1 }) => {
+	const { l: lang } = useParams()
+
 	return (
 		<>
 			<div className={styles.servicesGamesListGame}>
 				{props1.map(items => (
 					<Link
-						to={`/:l/NewsPreview/:${items.id}`}
+						to={`/NewsPreview/${items.id}`}
 						id={items.id}
 						key={items.id}
 						state={{ items }}

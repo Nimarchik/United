@@ -1,6 +1,6 @@
 import styles from '../../components/styles/App.module.css'
 import useLangChange from '../../pages/LangChange'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import aboutInfo1 from '../../components/assets/About/aboutInfo1.png'
 import aboutInfo2 from '../../components/assets/About/Asssasin .png'
 import sekiro from '../../components/assets/About/sekiro.png'
@@ -9,6 +9,8 @@ import StartGame from '../UI/StartGame'
 import AboutParters from '../../shared/AboutParters'
 
 const About = () => {
+	const value = localStorage.getItem('value') || 'uk'
+
 
 
 
@@ -71,7 +73,7 @@ const About = () => {
 								alt=''
 							/>
 						</div>
-						<Link to={`/:l/TeamsUnite`} className={styles.aboutInfoAim}>
+						<Link to={`/${value}/TeamsUnite`} className={styles.aboutInfoAim}>
 							<img className={styles.aboutInfoAimImg} src={aboutInfo2} alt='' />
 							<div className={styles.aboutInfoAimContent}>
 								<h3 className={styles.aboutInfoAimContentTitle}>

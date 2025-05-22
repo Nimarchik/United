@@ -1,14 +1,15 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from 'uuid'
+
+const BASE_PATH = '/United';
 
 export const GamesForAndroid = [
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/mine.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/maine.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/mine.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/maine.png`,
 		subGenre: 'Open World, Sandbox',
 		title: 'Minecraft: PE',
-		downloadLink:
-			'https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=ru',
+		downloadLink: 'https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=ru',
 		instruction: 'https://minecraft.fandom.com/ru/wiki/Pocket_Edition',
 		players: `1 - 10`,
 		item: 'itemsMine',
@@ -19,13 +20,12 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/samp.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/samp.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/samp.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/samp.png`,
 		subGenre: 'RP, Simulation, Action',
 		title: 'SAMP Mobile',
 		downloadLink: 'https://samp-mobile.com/samp-mobile.apk',
-		instruction:
-			'https://pawn.wiki/index.php?/topic/49423-samp-mobile-android-sbornik-urokov/',
+		instruction: 'https://pawn.wiki/index.php?/topic/49423-samp-mobile-android-sbornik-urokov/',
 		players: `1 - 1000`,
 		item: 'itemsSampM',
 		descriptionKey: 'subtitleSampM',
@@ -35,13 +35,12 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/los.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/los.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/los.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/los.png`,
 		subGenre: 'Action, Racing, Open World',
 		title: 'Los Angeles Crime',
 		downloadLink: 'https://play.google.com/store/apps/details?id=com.MA.LAC',
-		instruction:
-			'https://truecrime.fandom.com/wiki/Random_Crimes_in_Los_Angeles',
+		instruction: 'https://truecrime.fandom.com/wiki/Random_Crimes_in_Los_Angeles',
 		players: `1 - 10`,
 		item: 'itemsLos',
 		descriptionKey: 'subtitleLos',
@@ -51,14 +50,12 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/sf.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/sf.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/sf.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/sf.png`,
 		subGenre: 'Shooters, Action',
 		title: 'Special Forces Group 2',
-		downloadLink:
-			'https://play.google.com/store/apps/details?id=com.ForgeGames.SpecialForcesGroup2&hl=uk',
-		instruction:
-			'https://special-forces-group.fandom.com/wiki/Special_Forces_Group_2',
+		downloadLink: 'https://play.google.com/store/apps/details?id=com.ForgeGames.SpecialForcesGroup2&hl=uk',
+		instruction: 'https://special-forces-group.fandom.com/wiki/Special_Forces_Group_2',
 		players: `1 - 16`,
 		item: 'itemsSF',
 		descriptionKey: 'subtitleSF',
@@ -68,12 +65,11 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/nomb.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/bomb.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/nomb.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/bomb.png`,
 		subGenre: 'Casual',
 		title: 'Bomb Squad',
-		downloadLink:
-			'https://play.google.com/store/apps/details?id=net.froemling.bombsquad',
+		downloadLink: 'https://play.google.com/store/apps/details?id=net.froemling.bombsquad',
 		instruction: 'https://bombsquad.fandom.com/wiki/BombSquad_Wiki',
 		players: `1 - 8`,
 		item: 'itemsBomb',
@@ -84,12 +80,11 @@ export const GamesForAndroid = [
 	},
 	{
 		id: uuidv4(),
-		img: `${process.env.PUBLIC_URL}/GamesForAndoid/Pictures/polifyeld.png`,
-		imgCard: `${process.env.PUBLIC_URL}/GamesForAndoid/PicturesCard/polyfield.png`,
+		img: `${BASE_PATH}/GamesForAndroid/Pictures/polifyeld.png`,
+		imgCard: `${BASE_PATH}/GamesForAndroid/PicturesCard/polyfield.png`,
 		subGenre: 'Shooters, Action',
 		title: 'Polifyeld',
-		downloadLink:
-			'https://play.google.com/store/apps/details?id=com.MA.Polyfield&hl=uk',
+		downloadLink: 'https://play.google.com/store/apps/details?id=com.MA.Polyfield&hl=uk',
 		instruction: 'https://polyfield.net/',
 		players: `1 - 8`,
 		item: 'itemsPoli',
@@ -98,4 +93,4 @@ export const GamesForAndroid = [
 		feedback: '8.8',
 		videos: 'https://www.youtube.com/embed/FKDkJO3ExDQ?si=MRpx8IyJqK972yBQ',
 	},
-];
+]

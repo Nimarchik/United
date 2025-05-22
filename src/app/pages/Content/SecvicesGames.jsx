@@ -1,6 +1,6 @@
 import styles from '../../components/styles/App.module.css'
 import { servicesGamesCards } from '../../../../public/ServicesGames/ServicesGamesBD'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import useLangChange from '../LangChange'
 import NewsEvents from '../../shared/NewsEvents'
 import Helps from '../../shared/Helps'
@@ -9,6 +9,10 @@ import commGames from '../../components/assets/ServicesGame/commGames.png'
 import { PreviewCards } from '../../shared/PreviewCards'
 
 const SecvicesGames = () => {
+
+	const value = localStorage.getItem('value') || 'uk'
+
+	
 	return (
 		<>
 			<main className={styles.main}>
@@ -20,7 +24,7 @@ const SecvicesGames = () => {
 						<p className={styles.servicesGamesSubs}>
 							{useLangChange('servicesGamesSubs')}
 						</p>
-						<PreviewCards props={servicesGamesCards} />
+						<PreviewCards props={servicesGamesCards} lang={value} />
 					</div>
 				</section>
 

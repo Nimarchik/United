@@ -145,6 +145,8 @@
   .navListLink {
     &::after {
       width: 100%;
+      height: 0;
+      left: 0;
     }
 
     &:hover {
@@ -152,7 +154,6 @@
         position: relative;
         transform: translateY(0%);
         top: 0;
-        right: 0;
         left: 0;
         margin-top: 20px;
         z-index: 100;
@@ -166,7 +167,6 @@
         position: relative;
         transform: translateY(0%);
         top: 0;
-        right: 0;
         left: 0;
         margin-top: 20px;
         z-index: 100;
@@ -176,7 +176,6 @@
 
   .navListLink3 {
     transform: translateY(0%);
-
     top: 0;
     right: 0;
     left: 0;
@@ -184,7 +183,6 @@
       .navListItemList3 {
         position: relative;
         top: 0;
-        right: 0;
         left: 0;
         margin-top: 20px;
         z-index: 100;
@@ -562,6 +560,7 @@
   }
 
   .donateWrapper {
+    overflow: hidden;
     height: 1000px;
   }
 
@@ -948,9 +947,7 @@
     left: 24px;
     top: 32px;
   }
-  .servTitle {
-    margin-bottom: 20px;
-  }
+
   .servLink,
   .popularGameInnerContentLink {
     top: 148px;
@@ -998,16 +995,6 @@
   .popularGameInnerImg {
     width: 438px;
     height: 274px;
-  }
-
-  .communityInnerContent {
-    width: 270px;
-    top: 32px;
-    left: 24px;
-  }
-
-  .communityInnerContentTitle {
-    margin-bottom: 20px;
   }
 
   .newsInnerList {
@@ -1068,9 +1055,10 @@
   }
 
   .footerInner {
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 30px;
+    display: grid;
+    padding: 0 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 
   .footerInnerItemLinkPart,
@@ -1152,12 +1140,6 @@
     position: initial;
   }
 
-  .partnersBlockTitle {
-    position: absolute;
-    top: 32px;
-    left: 24px;
-  }
-
   .partnersImg1 {
     top: -46px;
   }
@@ -1179,15 +1161,934 @@
     bottom: inherit;
   }
 
-  .keySteamBlockTitle{
-    position: absolute;
-    top: 32px;
-    left: 24px;
-  }
 
   .keySteamImg {
     position: absolute;
     top: 212px;
     left: 10px;
+  }
+
+  .TeamSpeakTopBtnBlock {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .TeamSpeakTopSub {
+    width: 304px;
+    margin: 0 auto 24px;
+  }
+
+  .TeamSpeakTopBtnBlockImg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .teamsSpeakContentBlockInner,
+  .buyGamesBlocksPlatCont,
+  .KeySteamBlocksGeneralCont,
+  .teamsSpeakContentBlockInner1,
+  .teamsSpeakContentBlockInner3,
+  .partersBlocksNeParnerCont,
+  .comunityInnerBlocksHelpsContHelps,
+  .comunityInnerBlocksChatsCont,
+  .communityInnerContent,
+  .keySteamBlockTitle,
+  .partnersBlockTitle,
+  .buyGamesBlocksInfoCont,
+  .buyGamesBlocksUseCont,
+  .donateContentInnerBlock,
+  .privacyContentBlockCont {
+    position: absolute;
+    top: 32px;
+    left: 24px;
+    width: 291px;
+  }
+
+  .teamsSpeakContentBlockLinkImg {
+    position: absolute;
+    width: 257px;
+    height: 257px;
+    bottom: 60px;
+    right: 49px;
+    left: 49px;
+  } 
+
+  .teamsSpeakContentBlockLinkImg1 {
+    position: absolute;
+    width: 258px;
+    height: 341px;
+    bottom: 10px;
+  }
+
+  .teamsSpeakContentBlockInner {
+    width: 277px;
+    height: 194px;
+  }
+
+  .teamsSpeakContentBlockLinkImg2 {
+    position: absolute;
+    left: 42px;
+    width: 298px;
+    height: 265px;
+    bottom: 54px;
+  }
+
+  .teamsSpeakContentBlock1 {
+    display: none;
+  }
+
+  .helpsContainerBlock {
+    top: 32px;
+  }
+
+  .helpsImg {
+    right: -55px;
+    height: 354px;
+    bottom: 0;
+  }
+
+  .img8,
+  .img7,
+  .img6,
+  .img5,
+  .img4,
+  .img3,
+  .img2,
+  .img1,
+  .imgRight9 {
+    display: none;
+  }
+
+  .imgRight1 {
+    width: 90px;
+    height: 90px;
+    top: 129px;
+    right: 243px;
+  }
+
+  .imgRight2 {
+    top: 87px;
+    right: 32px;
+    width: 138px;
+    height: 138px;
+  }
+
+  .imgRight3 {
+    top: 247px;
+    right: 203px;
+  }
+
+  .imgRight4 {
+    top: 263px;
+    right: 308px;
+  }
+
+  .imgRight5 {
+    top: 284px;
+    right: 84px;
+  }
+
+  .imgRight8 {
+    top: 369px;
+    right: 203px;
+  }
+
+  .imgRight7 {
+    top: 404px;
+    right: 51px;
+  }
+
+  .imgRight6 {
+    top: 252px;
+    right: -42px;
+  }
+
+  .launchPC {
+    height: 1250px;
+    overflow: hidden;
+  }
+
+  .launchPcInner {
+    width: 250px;
+    transform: translate(-50%, 30%);
+  }
+
+  .launchPcBlock {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sectionInner,
+  .sectionInnerHamachi,
+  .sectionInnerServ,
+  .sectionInnerEvents,
+  .sectionInnerGameDay,
+  .sectionInnerInstall,
+  .voiceSearchPlayer,
+  .buyGamesBlocksInfo,
+  .buyGamesBlocksPlat,
+  .buyGamesBlocksUse,
+  .KeySteamBlocksGeneral,
+  .KeySteamBlocksGame,
+  .donateContentInner,
+  .teamsSpeakContentBlock,
+  .teamsSpeakContentBlock1,
+  .lanchPcImgPakLeft,
+  .lanchPcImgPakRight,
+  .helpsContainer,
+  .aboutInfoInner,
+  .aboutInfoAim,
+  .aboutCultureInnerBlock,
+  .partersBlocksPartners,
+  .partersBlocksNeParner,
+  .careerInnerBlocksGlobal,
+  .careerInnerBlocksProd,
+  .careerInnerBlocksYou,
+  .resourceBlocksLink,
+  .resourceBlocksLinkRev,
+  .resourceBlocksLinkSplash,
+  .resourceBlocksLinkGraphic,
+  .resourceBlocksLinkAds,
+  .comunityInnerBlocksPrav,
+  .comunityInnerBlocksUniteChannel,
+  .comunityInnerBlocksChats,
+  .privacyContentBlock {
+    height: 598px;
+  }
+
+  .HowItWorkImg {
+    width: 287px;
+    height: 232px;
+    left: 24px;
+    bottom: 42px;
+  }
+
+  .sectionHowItWorkInner {
+    top: 32px;
+    width: 217px;
+  }
+
+  .hamachi,
+  .servUnite,
+  .events,
+  .gameDay,
+  .instruction,
+  .voiceSearchPlayerBLock,
+  .sectionAndBlock,
+  .bigColectionsBlock,
+  .KeySteamBlocksKeysCont,
+  .KeySteamBlocksGameCont,
+  .aboutInfoInnerContent,
+  .aboutInfoAimContent,
+  .careerInnerBlocksProdCont,
+  .careerInnerBlocksYouCont {
+    position: absolute;
+    top: 32px;
+    left: 24px;
+    width: 273px;
+  }
+
+  .aboutCultureInnerBlockCont {
+    position: absolute;
+    top: 32px;
+    left: 24px;
+    width: 301px;
+  }
+
+  .aboutCultureInnerBlockContSub {
+    width: 301px;
+  }
+
+  .aboutInfoAimContent {
+    margin: 0;
+  }
+
+  .servUniteTitle {
+    width: 273px;
+  }
+
+  .hamachiSub,
+  .servUniteSub,
+  .eventsSub,
+  .gameDaySub,
+  .instructionSub,
+  .voiceSearchPlayerSub,
+  .bigColectionsSub,
+  .buyGamesBlocksUseContSub,
+  .donateContentInnerBlockSub,
+  .partersBlocksNeParnerContSub,
+  .resourceBlocksLinkContSub,
+  .resourceBlocksLinkRevContSub,
+  .resourceBlocksLinkSplashContSub,
+  .resourceBlocksLinkGraphicContSub,
+  .resourceBlocksLinkAdsContSub,
+  .comunityInnerBlocksPravContSub,
+  .comunityInnerBlocksHelpsContHelpsSub,
+  .comunityInnerBlocksUniteChannelContSub,
+  .comunityInnerBlocksChatsContSub,
+  .teamsSpeakContentBlockInnerSub1,
+  .helpsContainerSub,
+  .servTitle,
+  .teamsSpeakContentBlockInnerSub,
+  .communityInnerContentTitle {
+    margin-bottom: 20px;
+  }
+
+  .aboutInfoAimContentSub {
+    margin-bottom: 9px;
+  }
+
+  .hamachiImg {
+    bottom: 42px;
+    width: 361px;
+    height: 243px;
+  }
+
+  .servUniteImg {
+    top: 279px;
+    bottom: 0;
+    width: 287px;
+    height: 285px;
+    left: 34px;
+    right: 24px;
+  }
+
+  .eventsImg {
+    width: 220px;
+    height: 291px;
+  }
+
+  .gameDayImg {
+    right: 0;
+    bottom: 24px;
+    width: 311px;
+    height: 261px;
+  }
+
+  .instructionImg {
+    top: 308px;
+    width: 290px;
+    height: 236px;
+  }
+
+  .sliderContainer {
+    width: 100%;
+    padding: 0 20px 0 30px;
+  }
+
+  .flickity-prev-next-button.next {
+    right: 0px;
+  }
+  .flickity-prev-next-button.previous {
+    left: 5px;
+  }
+
+  .voiceTitle {
+    width: 334px;
+    margin: 0 auto 20px;
+  }
+
+  .voiceSub {
+    width: 278px;
+    margin: 0 auto 107px;
+  }
+
+  .voiceItems {
+    flex-direction: column;
+  }
+
+  .voiceTs,
+  .voiceMumble {
+    height: 525px;
+  }
+
+  .voiceTsImg,
+  .voiceMumbleImg {
+    position: absolute;
+    width: 258px;
+    height: 258px;
+    right: 59px;
+    left: 59px;
+    top: 134px;
+  }
+
+  .voiceSearchPlayerImg {
+    width: 537px;
+    height: 358px;
+    bottom: 0;
+  }
+
+  .sectionAndImg {
+    top: 290px;
+    right: 35px;
+    width: 337px;
+    height: 448px;
+  }
+
+  .bigColectionsImg {
+    top: 343px;
+    right: 33px;
+    left: 32px;
+    width: 279px;
+    height: 170px;
+  }
+
+  .servUniteImg1 {
+    top: 287px;
+    right: -15%;
+    width: 450px;
+    height: 284px;
+  }
+
+  .popularGameAndTitle,
+  .popularGameAndSub {
+    width: 334px;
+    margin: 0 auto 20px;
+  }
+
+  .buyGamesBlocksInfoImg {
+    position: absolute;
+    top: 285px;
+    width: 350px;
+    height: 295px;
+  }
+
+  .buyGamesBlocksPlatImg {
+    position: absolute;
+    top: 279px;
+    width: 290px;
+    height: 287px;
+  }
+
+  .buyGamesBlocksUseContTitle {
+    margin-bottom: 10px;
+  }
+
+  .buyGamesBlocksUseImg {
+    position: absolute;
+    top: 275px;
+    right: 73px;
+    width: 190px;
+    height: 292px;
+    margin-left: 0;
+  }
+
+  .KeySteamBlocksGeneralImg {
+    position: absolute;
+    top: 316px;
+    left: 81px;
+    width: 226px;
+    height: 233px;
+  }
+
+  .KeySteamBlocksKeysImg {
+    top: 295px;
+    left: 32px;
+    width: 329px;
+    height: 198px;
+  }
+
+  .KeySteamBlocksKeysContLink {
+    position: absolute;
+    top: 180px;
+  }
+
+  .KeySteamBlocksGameImg {
+    top: 336px;
+    left: 30px;
+    width: 300px;
+    height: 260px;
+  }
+
+  .KeySteamBlocksWarning {
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .KeySteamBlocksWarningImg {
+    width: 202px;
+    height: 224px;
+  }
+
+  .TeamsUniteProjectInnerList,
+  .TeamsUniteCommunityInnerList {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .allPartersInnerItemActive {
+    padding: 11px 5px;
+  }
+
+  .donateWrapper {
+    height: 900px;
+  }
+
+  .donateTopInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 346px;
+    transform: translate(-50%, 79%);
+  }
+
+  .donateTopInnerBtn {
+    width: 191px;
+    padding: 15px 15px;
+  }
+
+  .donateImgPackPicLeft1 {
+    top: 95px;
+    left: -21px;
+    width: 151px;
+    height: 153px;
+  }
+
+  .donateImgPackPicRight3 {
+    right: -38px;
+    top: 88px;
+    width: 113px;
+    height: 114px;
+  }
+
+  .donateImgPackPicRight2 {
+    top: 145px;
+    right: 82px;
+    width: 147px;
+    height: 152px;
+  }
+
+  .donateImgPackPicLeft2 {
+    top: 248px;
+    left: 53px;
+    width: 132px;
+    height: 137px;
+  }
+
+  .donateImgPackPicRight1 {
+    top: 282px;
+    right: -47px;
+    width: 164px;
+    height: 181px;
+  }
+
+  .donateImgPackPicLeft3 {
+    top: 362px;
+    left: -23px;
+    width: 106px;
+    height: 106px;
+  }
+
+  .donateContentInnerLinkImg {
+    position: absolute;
+    top: 295px;
+    right: 77px;
+    width: 180px;
+    height: 278px;
+  }
+
+  .donateProjectInnerSub {
+    width: 350px;
+    text-align: center;
+    height: 70px;
+  }
+
+  .platformInnerContent,
+  .platformInnerImg {
+    width: 310px;
+  }
+
+  .platformInnerContentTitle {
+    flex-direction: column;
+    width: 305px;
+  }
+
+  .platformInnerImgPic1,
+  .platformInnerImgPic2,
+  .platformInnerImgPic3 {
+    width: 147px;
+    height: 192px;
+  }
+
+  .platformInnerImgPic2 {
+    top: 112px;
+    left: 167px;
+  }
+
+  .aboutInnerList {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .aboutInnerListItem {
+    width: 226px;
+    height: 200px;
+  }
+
+  .aboutInnerListItemTitle {
+    font-size: 38px;
+  }
+
+  .aboutInnerListItemSub {
+    font-size: 18px;
+    width: 191px;
+    margin: 0 auto;
+  }
+
+  .aboutInfoAimImg {
+    bottom: 0;
+    width: 100%;
+    height: 338px;
+  }
+
+  .aboutCultureInnerTitle,
+  .aboutCultureInnerSub {
+    width: 260px;
+  }
+
+  .aboutCultureInnerSub {
+    font-weight: 600;
+  }
+
+  .aboutCultureInnerBlockImg {
+    bottom: -25px;
+    width: 100%;
+    height: 300px;
+  }
+
+  .aboutCultureInnerList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutCultureInnerItem {
+    width: 310px;
+    height: 280px;
+  }
+
+  .aboutCultureInnerItemTitle {
+    font-size: 24px;
+    width: 260px;
+  }
+
+  .aboutValuablesInnerTitle,
+  .aboutValuablesInnerSub {
+    width: 262px;
+  }
+  .aboutValuablesInnerSub {
+    margin: 0 auto 94px;
+  }
+
+  .aboutValuablesInnerList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutValuablesInnerItem {
+    width: 310px;
+    height: 225px;
+  }
+
+  .aboutValuablesInnerItemTitle {
+    font-size-adjust: 24px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  .partersBlocksPartners,
+  .careerInnerBlocksGlobal,
+  .resourceBlocksLinkRev,
+  .resourceBlocksLinkGraphic,
+  .comunityInnerBlocksPrav,
+  .comunityInnerBlocksUniteChannel,
+  .privacyContentBlock {
+    flex-direction: column-reverse;
+  }
+
+  .partersBlocksNeParner,
+  .resourceBlocksLink,
+  .resourceBlocksLinkSplash,
+  .resourceBlocksLinkAds {
+    flex-direction: column;
+  }
+
+  .partersBlocksPartnersImg {
+    width: 268px;
+    height: 144px;
+    margin-right: 40px;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+
+  .partersBlocksNeParnerImg {
+    position: absolute;
+    bottom: 66px;
+    width: 234px;
+    height: 204px;
+  }
+
+  .favoritsInnerList {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .favoritsInnerItem {
+    width: 310px;
+  }
+
+  .allPartersInnerList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .careerInnerBlocksGlobalImg {
+    width: 205px;
+    height: 224px;
+    margin-right: 45px;
+  }
+
+  .careerInnerBlocksGlobalCont {
+    width: 100%;
+  }
+
+  .careerInnerBlocksProdImg {
+    top: inherit;
+    bottom: 0;
+    width: 450px;
+    height: 330px;
+  }
+
+  .careerInnerBlocksYouImg {
+    top: inherit;
+    bottom: 0;
+    height: 300px;
+  }
+
+  .careerInnerBlocksYouCont {
+    margin: 0;
+    width: 350px;
+  }
+
+  .careerInnerBlocksYouContSub {
+    width: 330px;
+    margin-bottom: 20px;
+  }
+
+  .resourceInnerSub {
+    width: 304px;
+  }
+
+  .resourceBlocksLinkImg {
+    margin-right: 45px;
+    margin-bottom: 99px;
+    width: 224px;
+    height: 131px;
+  }
+
+  .resourceBlocksLinkRevImg {
+    width: 246px;
+    height: 155px;
+    margin-left: 0;
+    margin-right: 45px;
+    margin-bottom: 92px;
+  }
+
+  .resourceBlocksLinkSplashCont {
+    width: 98%;
+  }
+
+  .resourceBlocksLinkSplashBlockImg {
+    width: 250px;
+  }
+
+  .resourceBlocksLinkSplashImg {
+    width: 363px;
+    height: 217px;
+  }
+
+  .resourceBlocksLinkSplashImgSmart {
+    width: 134px;
+    height: 253px;
+  }
+
+  .resourceBlocksLinkGraphicImg {
+    width: 168px;
+    height: 156px;
+    margin-left: 0;
+    margin-right: 45px;
+    margin-bottom: 75px;
+  }
+
+  .resourceBlocksLinkAdsContSub {
+    width: 271px;
+  }
+
+  .resourceBlocksLinkAdsImg {
+    width: 293px;
+    height: 180px;
+    margin-bottom: 45px;
+  }
+
+  .comunityInner {
+    width: 338px;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .comunityInnerBlocksPravImg {
+    width: 121px;
+    height: 250px;
+    margin-left: 0;
+    margin-right: 45px;
+  }
+
+  .comunityInnerBlocksHelpsImg {
+    width: 336px;
+    height: 273px;
+  }
+
+  .comunityInnerBlocksUniteChannelImg {
+    width: 199px;
+    height: 258px;
+    margin: 0 45px 0 0;
+  }
+
+  .comunityInnerBlocksChatsImg {
+    width: 100%;
+    height: 216px;
+    top: inherit;
+    bottom: 43px;
+    right: 5px;
+  }
+
+  .contactInnerBlock {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .imgPreview {
+    width: 100%;
+    height: 211px;
+  }
+
+  .servSubPreview {
+    margin-top: 41px;
+  }
+
+  .previewListBtn {
+    flex-direction: column;
+    height: inherit;
+  }
+
+  .previewLink {
+    padding: 13px 24px;
+  }
+
+  .previewTitle {
+    margin-bottom: 24px;
+  }
+
+  .systemsReq {
+    margin-top: 54px;
+  }
+
+  .systemsReqList {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    margin-bottom: 55px;
+  }
+
+  .systemsReqListItem {
+    align-items: center;
+    justify-content: center;
+    width: 226px;
+    height: 200px;
+    padding: 0;
+  }
+
+  .trailer {
+    padding: 0;
+  }
+
+  .trailerCont {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trailerContText {
+    width: 335px;
+    height: 260px;
+  }
+
+  .trailerContTitle {
+    font-size: 28px;
+  }
+
+  .trailerContSub {
+    font-size: 16px;
+  }
+
+  .iframe {
+    width: 335px;
+    height: 188px;
+  }
+
+  .error {
+    padding: 58px 22px;
+  }
+
+  .errorInnerTitle,
+  .errorInnerSub {
+    width: 327px;
+  }
+
+  .contactInnerBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+  }
+
+  .rulesInner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rulesInnerTitle {
+    width: 100%;
+  }
+
+  .rulesInnerContentWrapper,
+  .rulesInnerContentList,
+  .privacyContentDate {
+    padding: 0 20px;
+  }
+
+  .privacyInner,
+  .privacyInnerSub {
+    width: 286px;
+  }
+
+  .privacyContentBlockImg {
+    width: 211px;
+    height: 211px;
+  }
+
+  .privacyContentBlockCont,
+  .privacyContentInnerTitle {
+    width: 276px;
+  }
+
+  .privacyContentInner {
+    padding: 40px 20px 80px;
   }
 }

@@ -33,7 +33,7 @@ const Resource = () => {
 				<section className={styles.resourceBlocks}>
 					<div className={styles.container}>
 						<a
-							href='/public/Resources/Logo.png'
+							href='Unite/Resources/Logo.png'
 							download='Logo.png'
 							className={styles.resourceBlocksLink}
 						>
@@ -52,7 +52,7 @@ const Resource = () => {
 							<img className={styles.resourceBlocksLinkImg} src={Logo} alt='' />
 						</a>
 						<a
-							href='/public/Resources/Background.rar'
+							href='Unite/Resources/Background.rar'
 							download='BackgroundUnite.rar'
 							className={styles.resourceBlocksLinkRev}
 						>
@@ -75,7 +75,7 @@ const Resource = () => {
 						</a>
 						<a
 							className={styles.resourceBlocksLinkSplash}
-							href='/public/Resources/Wallpaper.rar'
+							href='Unite/Resources/Wallpaper.rar'
 							download='Wallpaper.rar'
 						>
 							<div className={styles.resourceBlocksLinkSplashCont}>
@@ -104,7 +104,7 @@ const Resource = () => {
 						</a>
 						<a
 							className={styles.resourceBlocksLinkGraphic}
-							href='/public/Resources/Graphic_elements.rar'
+							href='Unite/Resources/Graphic_elements.rar'
 							download='Graphic_elements.rar'
 						>
 							<img
@@ -126,7 +126,7 @@ const Resource = () => {
 						</a>
 						<a
 							className={styles.resourceBlocksLinkAds}
-							href='/public/Resources/Ads_materials.rar'
+							href='Unite/Resources/Ads_materials.rar'
 							download='Ads_materials.rar'
 						>
 							<div className={styles.resourceBlocksLinkAdsCont}>

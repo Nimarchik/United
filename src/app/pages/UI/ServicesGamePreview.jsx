@@ -64,7 +64,7 @@ const ServicesGamePreview = () => {
 										{useLangChange('playersName')}
 									</p>
 								</li>
-								<li className={styles.systemsReqListItem}></li>
+								{/* <li className={styles.systemsReqListItem}></li> */}
 								<li className={styles.systemsReqListItem}>
 									<p className={styles.item}>{useLangChange(items.item)}</p>
 									<p className={styles.itemText}>{useLangChange('size')}</p>
@@ -84,7 +84,7 @@ const ServicesGamePreview = () => {
 									<h1 className={styles.trailerContTitle}>
 										{useLangChange(items.title)}
 									</h1>
-									{useLangChange(items.descriptionKey)}
+									<p className={styles.trailerContSub}>{useLangChange(items.descriptionKey)}</p>
 								</div>
 								<iframe
 									width='756'

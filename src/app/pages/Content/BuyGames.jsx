@@ -85,16 +85,16 @@ const BuyGames = () => {
       <section className={styles.buyGamesApp}>
         <div className={styles.container}>
           <div className={styles.buyGamesAppInner}>
-            <h3 className={styles.buyGamesAppTitle}>
-              {useLangChange('buyGamesAppTitle')}
-            </h3>
-            <p className={styles.buyGamesAppSub}>
-              {useLangChange('buyGamesAppSub')}
-            </p>
-            <Link className={styles.buyGamesAppLink}>
-              {useLangChange('buyGamesBlocksUseContLink')}
-            </Link>
-          </div>
+          <h3 className={styles.buyGamesAppTitle}>
+            {useLangChange('buyGamesAppTitle')}
+          </h3>
+          <p className={styles.buyGamesAppSub}>
+            {useLangChange('buyGamesAppSub')}
+          </p>
+          <Link className={styles.buyGamesAppLink}>
+            {useLangChange('buyGamesBlocksUseContLink')}
+          </Link>
+        </div>
         </div>
       </section>
     </main>

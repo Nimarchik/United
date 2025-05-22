@@ -3,7 +3,11 @@ import styles from '../components/styles/App.module.css'
 import useLangChange from '../pages/LangChange'
 import { Link } from 'react-router-dom'
 
+
 const NewsEvents = () => {
+	const value = localStorage.getItem('value') || 'uk'
+
+
 	return (
 		<>
 			<section className={styles.news}>
@@ -16,7 +20,7 @@ const NewsEvents = () => {
 							{NewsBD.map((items, index) => (
 								<li className={styles.newsInnerListItem} key={index}>
 									<Link
-										to={`/:l/NewsPreview/:${items.id}`}
+										to={`/NewsPreview/${items.id}`}
 										id={items.id}
 										key={items.id}
 										state={{ items }}
@@ -47,7 +51,7 @@ const NewsEvents = () => {
 								</li>
 							))}
 						</ul>
-						<Link to={`/:l/News`} className={styles.newsLink}>
+						<Link to={`/${value}/News`} className={styles.newsLink}>
 							{useLangChange('newsLink')}
 						</Link>
 					</div>

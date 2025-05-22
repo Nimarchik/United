@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { SinglGamesBD } from '../../../../public/SinglGame/SinglGameBD';
 import styles from '../../components/styles/App.module.css'
 import { SinglGamePreviewCard } from '../../shared/SInglGamePreviewCard';
@@ -15,6 +15,9 @@ import StartGame from '../UI/StartGame';
 
 
 const SinglGames = () => {
+	const value = localStorage.getItem('value') || 'uk'
+
+
 	return (
 		<>
 			<main className={styles.main}>
@@ -28,7 +31,7 @@ const SinglGames = () => {
 								{useLangChange('singlGamesInnerSub')}
 							</p>
 
-							<SinglGamePreviewCard props={SinglGamesBD} />
+							<SinglGamePreviewCard props={SinglGamesBD} lang={value} />
 						</div>
 					</div>
 				</section>

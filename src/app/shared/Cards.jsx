@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import useLangChange from '../pages/LangChange'
 
 export const Cards = ({ cards }) => {
+
 	return (
 		<>
 			<div className={styles.servicesGamesListGame}>

@@ -42,7 +42,7 @@ const searchIDNews = NewsBD.map(index => index)
 
 const router = createHashRouter([
 	{
-		path: '/',
+		path: '',
 		element: <App />,
 		errorElement: <Error />,
 		children: [
@@ -51,119 +51,117 @@ const router = createHashRouter([
 				element: <Home />,
 			},
 			{
-				path: `/:l`,
+				path: `:lang`,
 				element: <Home />,
 			},
 			{
-				path: `/:l/launchPcId`,
+				path: `:lang/launchPcId`,
 				element: <LauncherForPc />,
 			},
 			{
-				path: `/:l/teamspeak`,
+				path: `:lang/teamspeak`,
 				element: <TeamSpeak />,
 			},
 			{
-				path: `/:l/mumble`,
+				path: `:lang/mumble`,
 				element: <Mumble />,
 			},
 			{
-				path: `/:l/launchAndroid`,
+				path: `:lang/launchAndroid`,
 				element: <LauncherForAndroid />,
 			},
 			{
-				path: `/:l/services-game`,
+				path: `:lang/services-game`,
 				element: <SecvicesGames index={searchID} />,
 			},
 			{
-				path: `/:l/game-preview/:id`,
+				path: `/game-preview/:id`,
 				element: <ServicesGamePreview />,
 			},
 			{
-				path: `/:l/donate`,
+				path: `:lang/donate`,
 				element: <Donate />,
 			},
 			{
-				path: `/:l/about`,
+				path: `:lang/about`,
 				element: <About />,
 			},
 			{
-				path: `/:l/TeamsUnite`,
+				path: `:lang/TeamsUnite`,
 				element: <TeamsUnite />,
 			},
 			{
-				path: `/:l/OnlineGame`,
+				path: `:lang/OnlineGame`,
 				element: <OnlineGames index={searchIDOnlineGame} />,
 			},
 			{
-				path: `/:l/News`,
+				path: `:lang/News`,
 				element: <News index={searchIDNews} />,
 			},
 			{
-				path: `/:l/NewsPreview/:id`,
+				path: `/NewsPreview/:id`,
 				element: <NewsPreview />,
 			},
 			{
-				path: `/:l/Resource`,
+				path: `:lang/Resource`,
 				element: <Resource />,
 			},
 			{
-				path: `/:l/keySteam`,
+				path: `:lang/keySteam`,
 				element: <KeySteam />,
 			},
 			{
-				path: `/:l/ProgramForGame`,
+				path: `:lang/ProgramForGame`,
 				element: <ProgramsforGames />,
 			},
 			{
-				path: `/:l/GamesForAndroid`,
+				path: `:lang/GamesForAndroid`,
 				element: <GamesforAndroid />,
 			},
 			{
-				path: `/:l/ComunityUniteICQ`,
+				path: `:lang/ComunityUniteICQ`,
 				element: <ComunityUnite />,
 			},
 			{
-				path: `/:l/Parters`,
+				path: `:lang/Parters`,
 				element: <Parterres />,
 			},
 			{
-				path: `/:l/Contacts`,
+				path: `:lang/Contacts`,
 				element: <Contact />,
 			},
 			{
-				path: `/:l/Error`,
+				path: `:lang/Error`,
 				element: <Error />,
 			},
 			{
-				path: `/:l/Privacy`,
+				path: `:lang/Privacy`,
 				element: <Privacy />
 			},
 			{
-				path: `/:l/Rules`,
+				path: `:lang/Rules`,
 				element: <Rules />
 			},
 			{
-				path: `/:l/SinglGames`,
+				path: `:lang/SinglGames`,
 				element: <SinglGames />
 			},
 			{
-				path: `/:l/singl-game-preview/:id`,
+				path: `/singl-game-preview/:id`,
 				element: <SinglGamePreview />
 			},
 			{
-				path: `/:l/Career`,
+				path: `:lang/Career`,
 				element: <Career />
 			},
 			{
-				path: `/:l/buygames`,
+				path: `:lang/buygames`,
 				element: <BuyGames />
 			}
 		],
 
-	}],
-	{
-		basename: '/United',
-	})
+	}
+])
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
